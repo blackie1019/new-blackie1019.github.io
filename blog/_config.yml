@@ -13,7 +13,7 @@ timezone: Asia/Taipei
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blackie1019..github.io
+url: https://blackie1019.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -67,6 +67,10 @@ feed:
   content_limit_delim: ' '
   order_by: -date
 
+sitemap:
+    path: sitemap.xml
+    template: ./sitemap_template.xml
+    
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -97,6 +101,27 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-matery
+plugins:
+- hexo-generator-robotstxt
+
+# https://github.com/leecrossley/hexo-generator-robotstxt
+robotstxt:
+  useragent: "*"
+  disallow:
+    - /css/
+    - /images/
+    - /img/
+    - /js/
+    - /fonts/
+    - /vendors/
+    - /fancybox/
+  allow:
+    - /
+    - /archives/
+    - /categories/
+    - /tags/
+    - /tags/
+  sitemap: /sitemap.xml
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
