@@ -1,0 +1,237 @@
+<!-- build time:Mon Sep 30 2019 15:37:57 GMT+0000 (Coordinated Universal Time) --><!DOCTYPE HTML><html lang="zh-TW"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="keywords" content="Amazon Web Service 30 days - 19 : Lambda, blackie tsai, blackie1019"><meta name="description" content="30天鐵人賽介紹 AWS 雲端世界 - 19:　改變雲端架構的核心計算服務 LambdaWhat is LambdaAWS Lambda 是一種無伺服器運算服務(Serverless)，可設定觸發條件後執行特定的程式碼作為事件的回應，並自動"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="renderer" content="webkit|ie-stand|ie-comp"><meta name="mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>Amazon Web Service 30 days - 19 : Lambda | Blackie&#39;s Failed Notes</title><link rel="icon" type="image/png" href="/favicon.png"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.min.css"><link rel="stylesheet" type="text/css" href="/css/matery.css"><link rel="stylesheet" type="text/css" href="/css/my.css"><style type="text/css"></style><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body><header class="navbar-fixed"><nav id="headNav" class="bg-color nav-transparent"><div id="navContainer" class="nav-wrapper head-container"><div class="brand-logo"><a href="/" class="waves-effect waves-light"><img src="/medias/logo.png" class="logo-img" alt="LOGO"> <span class="logo-span">Blackie's Failed Notes</span></a></div><a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a><ul class="right nav-menu"><li class="hide-on-med-and-down nav-item"><a href="/tags" class="waves-effect waves-light"><i class="fas fa-tags" style="zoom:.6"></i> <span>Tags</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/categories" class="waves-effect waves-light"><i class="fas fa-bookmark" style="zoom:.6"></i> <span>Categories</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/archives" class="waves-effect waves-light"><i class="fas fa-archive" style="zoom:.6"></i> <span>Archives</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/about" class="waves-effect waves-light"><i class="fas fa-user-circle" style="zoom:.6"></i> <span>About</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/friends" class="waves-effect waves-light"><i class="fas fa-address-book" style="zoom:.6"></i> <span>Recommend</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/atom.xml" class="waves-effect waves-light"><i class="fas fa-rss" style="zoom:.6"></i> <span>RSS</span></a></li><li><a href="#searchModal" class="modal-trigger waves-effect waves-light"><i id="searchIcon" class="fas fa-search" title="Search" style="zoom:.85"></i></a></li></ul><div id="mobile-nav" class="side-nav sidenav"><div class="mobile-head bg-color"><img src="/medias/logo.png" class="logo-img circle responsive-img"><div class="logo-name">Blackie's Failed Notes</div><div class="logo-desc">Interested in JavaScript, ASP.NET Core, Cloud and Solution Architecture.</div></div><ul class="menu-list mobile-menu-list"><li class="m-nav-item"><a href="/tags" class="waves-effect waves-light"><i class="fa-fw fas fa-tags"></i> Tags</a></li><li class="m-nav-item"><a href="/categories" class="waves-effect waves-light"><i class="fa-fw fas fa-bookmark"></i> Categories</a></li><li class="m-nav-item"><a href="/archives" class="waves-effect waves-light"><i class="fa-fw fas fa-archive"></i> Archives</a></li><li class="m-nav-item"><a href="/about" class="waves-effect waves-light"><i class="fa-fw fas fa-user-circle"></i> About</a></li><li class="m-nav-item"><a href="/friends" class="waves-effect waves-light"><i class="fa-fw fas fa-address-book"></i> Recommend</a></li><li class="m-nav-item"><a href="/atom.xml" class="waves-effect waves-light"><i class="fa-fw fas fa-rss"></i> RSS</a></li></ul></div></div></nav></header><div class="bg-cover pd-header post-cover" style="background-image:url(/medias/featureimages/7.jpg)"><div class="container" style="right:0;left:0"><div class="row"><div class="col s12 m12 l12"><div class="brand"><div class="description center-align post-title">Amazon Web Service 30 days - 19 : Lambda</div></div></div></div></div></div><main class="post-container content"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.8.0/tocbot.css"><style>#articleContent h1::before,#articleContent h2::before,#articleContent h3::before,#articleContent h4::before,#articleContent h5::before,#articleContent h6::before{display:block;content:" ";height:100px;margin-top:-100px;visibility:hidden}#articleContent :focus{outline:0}.toc-fixed{position:fixed;top:64px}.toc-widget{padding-left:20px}.toc-widget .toc-title{margin:35px 0 15px 0;padding-left:17px;font-size:1.5rem;font-weight:700;line-height:1.5rem}.toc-widget ol{padding:0;list-style:none}#toc-content ol{padding-left:10px}#toc-content ol li{padding-left:10px}#toc-content .toc-link:hover{color:#42b983;font-weight:700;text-decoration:underline}#toc-content .toc-link::before{background-color:transparent;max-height:25px}#toc-content .is-active-link{color:#42b983}#toc-content .is-active-link::before{background-color:#42b983}#floating-toc-btn{position:fixed;right:15px;bottom:76px;padding-top:15px;margin-bottom:0;z-index:998}#floating-toc-btn .btn-floating{width:48px;height:48px}#floating-toc-btn .btn-floating i{line-height:48px;font-size:1.4rem}</style><div class="row"><div id="main-content" class="col s12 m12 l9"><div id="artDetail"><div class="card"><div class="card-content article-info"><div class="row tag-cate"><div class="col s7"><div class="article-tag"><a href="/tags/AWS/"><span class="chip bg-color">AWS</span></a></div></div><div class="col s5 right-align"><div class="post-cate"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/Cloud/" class="post-category">Cloud</a></div></div></div><div class="post-info"><div class="post-date info-break-policy"><i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp; 2018-01-07</div><div class="info-break-policy"><i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp; 2.2k</div><div class="info-break-policy"><i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp; 9 Min</div><div id="busuanzi_container_page_pv" class="info-break-policy"><i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp; <span id="busuanzi_value_page_pv"></span></div></div></div><hr class="clearfix"><div class="card-content article-card-content"><div id="articleContent"><p>30天鐵人賽介紹 AWS 雲端世界 - 19:　改變雲端架構的核心計算服務 Lambda</p><h2 id="What-is-Lambda"><a href="#What-is-Lambda" class="headerlink" title="What is Lambda"></a>What is Lambda</h2><p>AWS Lambda 是一種無伺服器運算服務(Serverless)，可設定觸發條件後執行特定的程式碼作為事件的回應，並自動透過該服務管理基礎設備(Infrastructure)的運算資源，不必考慮伺服器的類型或選項，只需思考需要使用的多少運算時間來作為費用成本。</p><p><img src="Lambda.jpg" alt="Lambda.jpg"></p><p>簡單來講 Lambda 就像是把服務外包出去，開發人員能花更多的精力專注在開發的本質上(只需撰寫程式碼)，而與昨天介紹的 <em>beanstalk</em> 最大的差別在於 Lambda 定義事件觸發條件，此後程式便會在條件滿足時自動運作，如果沒有遇到觸發條件則不運作，因此可以省下更多的經費。</p><p>而 Lambda 應用的情境非常廣泛，這邊附上官方給的三個範例:</p><p><img src="pull-user-app-example-10.png" alt="pull-user-app-example-10"></p><p><img src="push-s3-example-10.png" alt="push-s3-example-10.png"></p><p><img src="push-user-app-example-10.png" alt="push-user-app-example-10.png"></p><p>收費方式主要可以考量三點:</p><ul><li>所需 Memory 與程式執行時間</li><li>呼叫次數</li><li>資料傳輸量</li></ul><p>不過 Lambda 有提供免費方案，包含每月 100 萬個免費請求以及每月 400,000 GB-秒的運算時間；這個400,000 GB-秒的部份，會根據我們選擇的記憶體（Memory）而有不同的免費秒數。</p><p>Lambda是被動式的呼叫，預設它並不支援外部網址；Lambda只支援透過其他 AWS 服務本來觸發呼叫。另外開發上，不支援Debug下中斷點，所以我們需要透過Log的方式來進行Debug，而且 Lambda 在執行的環境是唯讀的，所以無法透過Disk I/O的方式寫入任何檔案至Lambda上，如果有寫入檔案的需求則需要串接至 S3 服務上面。</p><p>目前支援的開發語言與架構:</p><ul><li>Node.js (JavaScript)</li><li>Python</li><li>Java (與 Java 8 相容)</li><li>C# (.NET Core, 2.0 快要有 support 了…<a href="https://github.com/aws/aws-lambda-dotnet/issues/149" target="_blank" rel="noopener">Support to .NET Core 2.0</a>)</li></ul><p>詳細支援內容可以參考<a href="http://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html" target="_blank" rel="noopener">Lambda Execution Environment and Available Libraries</a>，不過目前這邊的更新有點慢…</p><h2 id="Hands-on-Lab"><a href="#Hands-on-Lab" class="headerlink" title="Hands on Lab"></a>Hands on Lab</h2><p>這邊我們將以 .NET Core 搭配 <a href="https://serverless.com" target="_blank" rel="noopener">Serverless Framework</a> 示範，撰寫第一個 Lambda，將 Lambda 觸發時寫一個紀錄至 CloudWatch 中存放。</p><p>先登入 <a href="https://console.aws.amazon.com/console/home" target="_blank" rel="noopener">AWS Console</a></p><p>然後在中間的輸入框查詢 EC2 ，或是透過左上角的 Services 點選到　Compute　下的 Lambda 服務。</p><p><img src="lab_1.png" alt="lab_1.png"></p><p><img src="lab_2.png" alt="lab_2.png"></p><p>這邊只是看一下服務內容，接下來的操作我們將使用 CLI + <a href="https://serverless.com/" target="_blank" rel="noopener">Serverless</a> 這個 CLI tool 幫我們完成</p><h3 id="Setup-up-serverless-framework-and-create-project"><a href="#Setup-up-serverless-framework-and-create-project" class="headerlink" title="Setup up serverless framework and create project"></a>Setup up serverless framework and create project</h3><p>首先讓我們快速透過 <em>npm</em> 安裝 Serverless:</p><pre><code>npm install serverless -g</code></pre><p>這邊你要用 <em>serverless</em> 或是 <em>sls</em> 當作指令都可以</p><pre><code>serverless -v
+sls -v</code></pre><p><img src="lab_sls_01.png" alt="lab_sls_01.png"></p><p>而當我們將 CLI 安裝好就可以透過樣板產生專案檔了，再產生前我們可以先查看一下當前有的樣板:</p><pre><code>serverless create --help</code></pre><p><img src="lab_sls_02.png" alt="lab_sls_02.png"></p><p>接著我們可以透過以下指令產生一個新的專案:</p><pre><code>sls create -t aws-csharp --name lambda-dotnet</code></pre><p><img src="lab_sls_03.png" alt="lab_sls_03.png"></p><p>這邊可以看到專案產生的結構如下:</p><p><img src="lab_sls_04.png" alt="lab_sls_04.png"></p><p>而其中一個主要處理的程式內容如下:</p><p>handler.cs</p><pre class="language-csharp"><code class="language-csharp"><span class="token keyword">using</span> Amazon<span class="token punctuation">.</span>Lambda<span class="token punctuation">.</span>Core<span class="token punctuation">;</span>
+<span class="token keyword">using</span> System<span class="token punctuation">;</span>
+
+<span class="token punctuation">[</span>assembly<span class="token punctuation">:</span><span class="token function">LambdaSerializer</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>Amazon<span class="token punctuation">.</span>Lambda<span class="token punctuation">.</span>Serialization<span class="token punctuation">.</span>Json<span class="token punctuation">.</span>JsonSerializer<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+<span class="token keyword">namespace</span> AwsDotnetCsharp
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Handler</span>
+    <span class="token punctuation">{</span>
+       <span class="token keyword">public</span> Response <span class="token function">Hello</span><span class="token punctuation">(</span>Request request<span class="token punctuation">,</span> ILambdaContext context<span class="token punctuation">)</span> 
+       <span class="token punctuation">{</span>       
+          <span class="token comment" spellcheck="true">// Log entries show up in CloudWatch</span>
+
+            <span class="token keyword">var</span> output <span class="token operator">=</span> <span class="token keyword">string</span><span class="token punctuation">.</span><span class="token function">Format</span><span class="token punctuation">(</span><span class="token string">"Example log entry with request:{0}\n"</span><span class="token punctuation">,</span>request<span class="token punctuation">.</span>Body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            context<span class="token punctuation">.</span>Logger<span class="token punctuation">.</span><span class="token function">LogLine</span><span class="token punctuation">(</span>output<span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Response</span><span class="token punctuation">(</span><span class="token string">"Go 2018 iT 邦幫忙鐵人賽"</span><span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Response</span>
+    <span class="token punctuation">{</span>
+      <span class="token keyword">public</span> <span class="token keyword">string</span> Message <span class="token punctuation">{</span><span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+      <span class="token keyword">public</span> Request Request <span class="token punctuation">{</span><span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+      <span class="token keyword">public</span> <span class="token function">Response</span><span class="token punctuation">(</span><span class="token keyword">string</span> message<span class="token punctuation">,</span> Request request<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        Message <span class="token operator">=</span> message<span class="token punctuation">;</span>
+        Request <span class="token operator">=</span> request<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Request</span>
+    <span class="token punctuation">{</span>
+      <span class="token keyword">public</span> <span class="token keyword">string</span> Key1 <span class="token punctuation">{</span><span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+      <span class="token keyword">public</span> <span class="token keyword">string</span> Key2 <span class="token punctuation">{</span><span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+      <span class="token keyword">public</span> <span class="token keyword">string</span> Key3 <span class="token punctuation">{</span><span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+      <span class="token keyword">public</span> <span class="token function">Request</span><span class="token punctuation">(</span><span class="token keyword">string</span> key1<span class="token punctuation">,</span> <span class="token keyword">string</span> key2<span class="token punctuation">,</span> <span class="token keyword">string</span> key3<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        Key1 <span class="token operator">=</span> key1<span class="token punctuation">;</span>
+        Key2 <span class="token operator">=</span> key2<span class="token punctuation">;</span>
+        Key3 <span class="token operator">=</span> key3<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>如果在不喜歡打開來看到一推相依套件沒載入的警告，可以先在專案目錄下將套件先行還原:</p><pre><code>dotnet restore</code></pre><p><img src="lab_sls_05.png" alt="lab_sls_05.png"></p><p>而另外一個需要重點介紹的就是 <em>serverless.yaml</em> ，這邊包含環境的設定，其中 Lambda function-handler 的註冊組合規則為 : <strong>{DLL Name}::{Class namespace}:{Method name}</strong> 的結構:</p><p>serverless.yaml</p><pre class="language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># Welcome to Serverless!</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true"># This file is the main config file for your service.</span>
+<span class="token comment" spellcheck="true"># It's very minimal at this point and uses default values.</span>
+<span class="token comment" spellcheck="true"># You can always add more config options for more control.</span>
+<span class="token comment" spellcheck="true"># We've included some commented out config examples here.</span>
+<span class="token comment" spellcheck="true"># Just uncomment any of them to get that config option.</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true"># For full config options, check the docs:</span>
+<span class="token comment" spellcheck="true">#    docs.serverless.com</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true"># Happy Coding!</span>
+
+<span class="token key atrule">service</span><span class="token punctuation">:</span> lambda<span class="token punctuation">-</span>dotnet
+
+<span class="token comment" spellcheck="true"># You can pin your service to only deploy with a specific Serverless version</span>
+<span class="token comment" spellcheck="true"># Check out our docs for more details</span>
+<span class="token comment" spellcheck="true"># frameworkVersion: "=X.X.X"</span>
+
+<span class="token key atrule">provider</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> aws
+  <span class="token key atrule">runtime</span><span class="token punctuation">:</span> dotnetcore1.0
+
+<span class="token comment" spellcheck="true"># you can overwrite defaults here</span>
+<span class="token comment" spellcheck="true">#  stage: dev</span>
+<span class="token comment" spellcheck="true">#  region: us-east-1</span>
+
+<span class="token comment" spellcheck="true"># you can add statements to the Lambda function's IAM Role here</span>
+<span class="token comment" spellcheck="true">#  iamRoleStatements:</span>
+<span class="token comment" spellcheck="true">#    - Effect: "Allow"</span>
+<span class="token comment" spellcheck="true">#      Action:</span>
+<span class="token comment" spellcheck="true">#        - "s3:ListBucket"</span>
+<span class="token comment" spellcheck="true">#      Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }</span>
+<span class="token comment" spellcheck="true">#    - Effect: "Allow"</span>
+<span class="token comment" spellcheck="true">#      Action:</span>
+<span class="token comment" spellcheck="true">#        - "s3:PutObject"</span>
+<span class="token comment" spellcheck="true">#      Resource:</span>
+<span class="token comment" spellcheck="true">#        Fn::Join:</span>
+<span class="token comment" spellcheck="true">#          - ""</span>
+<span class="token comment" spellcheck="true">#          - - "arn:aws:s3:::"</span>
+<span class="token comment" spellcheck="true">#            - "Ref" : "ServerlessDeploymentBucket"</span>
+<span class="token comment" spellcheck="true">#            - "/*"</span>
+
+<span class="token comment" spellcheck="true"># you can define service wide environment variables here</span>
+<span class="token comment" spellcheck="true">#  environment:</span>
+<span class="token comment" spellcheck="true">#    variable1: value1</span>
+
+<span class="token comment" spellcheck="true"># you can add packaging information here</span>
+<span class="token key atrule">package</span><span class="token punctuation">:</span>
+  <span class="token key atrule">artifact</span><span class="token punctuation">:</span> bin/release/netcoreapp1.0/deploy<span class="token punctuation">-</span>package.zip
+<span class="token comment" spellcheck="true">#  exclude:</span>
+<span class="token comment" spellcheck="true">#    - exclude-me.js</span>
+<span class="token comment" spellcheck="true">#    - exclude-me-dir/**</span>
+
+<span class="token key atrule">functions</span><span class="token punctuation">:</span>
+  <span class="token key atrule">hello</span><span class="token punctuation">:</span>
+    <span class="token key atrule">handler</span><span class="token punctuation">:</span> CsharpHandlers<span class="token punctuation">:</span><span class="token punctuation">:</span>AwsDotnetCsharp.Handler<span class="token punctuation">:</span><span class="token punctuation">:</span>Hello
+
+<span class="token comment" spellcheck="true">#    The following are a few example events you can configure</span>
+<span class="token comment" spellcheck="true">#    NOTE: Please make sure to change your handler code to work with those events</span>
+<span class="token comment" spellcheck="true">#    Check the event documentation for details</span>
+<span class="token comment" spellcheck="true">#      - http:</span>
+<span class="token comment" spellcheck="true">#          path: users/create</span>
+<span class="token comment" spellcheck="true">#          method: get</span>
+<span class="token comment" spellcheck="true">#      - s3: ${env:BUCKET}</span>
+<span class="token comment" spellcheck="true">#      - schedule: rate(10 minutes)</span>
+<span class="token comment" spellcheck="true">#      - sns: greeter-topic</span>
+<span class="token comment" spellcheck="true">#      - stream: arn:aws:dynamodb:region:XXXXXX:table/foo/stream/1970-01-01T00:00:00.000</span>
+<span class="token comment" spellcheck="true">#      - alexaSkill</span>
+<span class="token comment" spellcheck="true">#      - alexaSmartHome: amzn1.ask.skill.xx-xx-xx-xx</span>
+<span class="token comment" spellcheck="true">#      - iot:</span>
+<span class="token comment" spellcheck="true">#          sql: "SELECT * FROM 'some_topic'"</span>
+<span class="token comment" spellcheck="true">#      - cloudwatchEvent:</span>
+<span class="token comment" spellcheck="true">#          event:</span>
+<span class="token comment" spellcheck="true">#            source:</span>
+<span class="token comment" spellcheck="true">#              - "aws.ec2"</span>
+<span class="token comment" spellcheck="true">#            detail-type:</span>
+<span class="token comment" spellcheck="true">#              - "EC2 Instance State-change Notification"</span>
+<span class="token comment" spellcheck="true">#            detail:</span>
+<span class="token comment" spellcheck="true">#              state:</span>
+<span class="token comment" spellcheck="true">#                - pending</span>
+<span class="token comment" spellcheck="true">#      - cloudwatchLog: '/aws/lambda/hello'</span>
+<span class="token comment" spellcheck="true">#      - cognitoUserPool:</span>
+<span class="token comment" spellcheck="true">#          pool: MyUserPool</span>
+<span class="token comment" spellcheck="true">#          trigger: PreSignUp</span>
+
+<span class="token comment" spellcheck="true">#    Define function environment variables here</span>
+<span class="token comment" spellcheck="true">#    environment:</span>
+<span class="token comment" spellcheck="true">#      variable2: value2</span>
+
+<span class="token comment" spellcheck="true"># you can add CloudFormation resource templates here</span>
+<span class="token comment" spellcheck="true">#resources:</span>
+<span class="token comment" spellcheck="true">#  Resources:</span>
+<span class="token comment" spellcheck="true">#    NewResource:</span>
+<span class="token comment" spellcheck="true">#      Type: AWS::S3::Bucket</span>
+<span class="token comment" spellcheck="true">#      Properties:</span>
+<span class="token comment" spellcheck="true">#        BucketName: my-new-bucket</span>
+<span class="token comment" spellcheck="true">#  Outputs:</span>
+<span class="token comment" spellcheck="true">#     NewOutput:</span>
+<span class="token comment" spellcheck="true">#       Description: "Description for the output"</span>
+<span class="token comment" spellcheck="true">#       Value: "Some output value"</span>
+</code></pre><p>所以這邊我們可以看到專案檔(.csproj) 該專案輸出的 dll 名稱為 <strong>CsharpHandler</strong>:</p><p><img src="lab_sls_08.png" alt="lab_sls_08.png"></p><p>而這邊可以稍微提及一下 global. json 裡面包含了當前使用的 SDK (.NET Core)版本，目前官方支援的還是 1.0.4/1.1.0 版。</p><p><img src="lab_sls_07.png" alt="lab_sls_07.png"></p><p>接著設定 serverless 的環境設定將我們可以直接將程式碼部屬上 AWS :</p><pre><code>serverless config credentials --provider aws --key &lt;Your Key&gt; --secret &lt;Your Secret&gt;</code></pre><p>完成後可從畫面看到設定成功，代表我們成功註冊至 serverless 的環境中就可以接下來部屬我們的 .NET Core 至 Lambda環境</p><h3 id="Build-and-deploy-our-NET-Core-Lambda"><a href="#Build-and-deploy-our-NET-Core-Lambda" class="headerlink" title="Build and deploy our .NET Core Lambda"></a>Build and deploy our .NET Core Lambda</h3><p>由於先前已經有執行過還原指令，我們就可以直接透過以下指令幫我們建立部屬的壓縮檔案:</p><pre><code>dotnet lambda package --configuration release --framework netcoreapp1.0 --output-package bin/release/netcoreapp1.0/deploy-package.zip</code></pre><p>或是我們也可以透過以兩下個指令檔幫我們執行:</p><p>bash 環境:</p><pre><code>sh build.sh</code></pre><p>Windows:</p><pre><code>build.cmd</code></pre><p>最後我們只要透過下面指令執行部屬就可以了:</p><pre><code>sls deploy -v</code></pre><p><img src="lab_sls_15.png" alt="lab_sls_15.png"></p><p>當部屬完成後我們即可透過 serverless 提供的指令 <em>invoke</em> 進行測試</p><pre><code>serverless invoke -f hello -d &#39;{&quot;key3&quot;: &quot;value3&quot;,&quot;key2&quot;: &quot;value2&quot;,&quot;key1&quot;: &quot;value1&quot;}&#39;</code></pre><p><img src="lab_sls_25.png" alt="lab_sls_25.png"></p><p>關於 invoke 指令可以參考 <a href="https://serverless.com/framework/docs/providers/aws/cli-reference/invoke-local/" target="_blank" rel="noopener">Serverless CLI Reference - AWS - Invoke</a></p><p>而我們由 AWS Console 進入 Lambda 服務即可看到當前 Lambda 的架構:</p><p><img src="lab_sls_16.png" alt="lab_sls_16.png"></p><p><img src="lab_sls_17.png" alt="lab_sls_17.png"></p><p>可選擇直接建立測試 Event 並手動執行:</p><p><img src="lab_sls_23.png" alt="lab_sls_23.png"></p><p><img src="lab_sls_24.png" alt="lab_sls_24.png"></p><p>這邊如果帶入的參數或是呼叫的函式名稱錯誤會顯示錯誤內容:</p><p><img src="lab_sls_23_2.png" alt="lab_sls_23_2.png"></p><h3 id="CloudWatch-Result"><a href="#CloudWatch-Result" class="headerlink" title="CloudWatch Result"></a>CloudWatch Result</h3><p>這邊我們來看一下 CloudWatch 上的結果:</p><p><img src="lab_sls_19.png" alt="lab_sls_19.png"></p><p><img src="lab_sls_26.png" alt="lab_sls_26.png"></p><p>這邊可以看到兩次分別由不同方式觸發的紀錄</p><h3 id="Update-and-Deploy"><a href="#Update-and-Deploy" class="headerlink" title="Update and Deploy"></a>Update and Deploy</h3><p>這邊如果我們需要修改程式，則必須在程式修改完後再次執行剛剛打包壓縮 <em>zip</em> 檔案的指令重新產生一次壓縮檔:</p><pre><code>dotnet lambda package --configuration release --framework netcoreapp1.0 --output-package bin/release/netcoreapp1.0/deploy-package.zip</code></pre><p>而當壓縮檔案更新好後我們就可以透過原先的部屬指令進行發佈，這邊會自動幫我們判斷有無差異，如果有才進行更新:</p><p><img src="lab_sls_21.png" alt="lab_sls_21.png"></p><p><img src="lab_sls_22.png" alt="lab_sls_22.png"></p><p>每次的更新則會讓 Lambda 有一組版本號，所以我們對應的 CloudWatch 也會有不同的清單出來:</p><h2 id="More-NET-Core-implement"><a href="#More-NET-Core-implement" class="headerlink" title="More .NET Core implement"></a>More .NET Core implement</h2><p>首先可以參考筆者先前的部落格內容<a href="http://blackie1019.github.io/dotnet/">.NET Core 專區</a>或是 John 大的 <a href="https://ithelp.ithome.com.tw/users/20107461/ironman/1372" target="_blank" rel="noopener">ASP.NET Core 從入門到實用 </a>完成 .NET Core 的環境設置，並安裝<a href="https://github.com/aws/aws-extensions-for-dotnet-cli" target="_blank" rel="noopener">aws-extensions-for-dotnet-cli</a>。這個 CLI 整合了原先 .NET Core 的 CLI ，可以更快速的發佈應用程式到 AWS 上。</p><p>而我們也可以參考 <a href="https://github.com/aws/aws-lambda-dotnet" target="_blank" rel="noopener">aws-lambda-dotnet</a>，只要在我們的新增下面這個套件的相依</p><pre><code>dotnet new -i Amazon.Lambda.Templates::*</code></pre><p>我們就可透過以下指令列出當前可用的樣板</p><pre><code>dotnet new lambda --list</code></pre><p><img src="lab_0_1.png" alt="lab_0_1.png"></p><p><img src="lab_0_2.png" alt="lab_0_2.png"></p><p>或是用 Visual Stuido 2017 + <a href="https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2017" target="_blank" rel="noopener">AWS Toolkit for Visual Studio 2017</a>。</p><p>由於開發目前還限制在 .NET Core 1.0 的版本，如果對於 VSCode 與 .NET Core CLI 不熟悉的朋友建議採 VS2017 + AWS Toolkit for Visual Studio 2017方式會較為方便。</p><p>這邊會需要設定一個 <em>aws-lambda-tools-defaults.json</em> 的檔案來指定到時發佈時的相關設定，所以發佈時如果要更改 Region 或是一些服務的權限設定也可以重這邊設定。</p><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul><li><a href="https://aws.amazon.com/tw/lambda/details/" target="_blank" rel="noopener">AWS Lambda</a></li><li><a href="http://docs.aws.amazon.com/lambda/latest/dg/use-cases.html" target="_blank" rel="noopener">Examples of How to Use AWS Lambda</a></li><li>[Going serverless with .NET Core, AWS Lambda and the Serverless framework](serverless config credentials –provider aws –key AKIAIRJZONJSC36TGFXQ –secret hO2pTjpX1Ci5+cz0P7igtw1JJ1x/zSAnLt4rxp6M)</li></ul></div><hr><div class="signature"><img class="signature-profile" alt="profile2" src="/medias/signature.jpg"><div class="mwt_border"><span class="arrow_l_int"></span> <span class="arrow_l_out"></span><p>如果覺得還不錯麻煩請在文章上面給予推薦，支持是持續努力產出的動力</p></div></div><link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css"><div id="article-share"><div class="social-share" data-sites="twitter,linkedin,facebook" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div><script src="/libs/share/js/social-share.min.js"></script></div><style>#reward{margin:40px 0;text-align:center}#reward .reward-link{font-size:1.88rem}#reward .btn-floating:hover{box-shadow:0 6px 12px rgba(0,0,0,.2),0 5px 15px rgba(0,0,0,.2)}#rewardModal{width:320px;height:350px}#rewardModal .reward-title{margin:15px auto;padding-bottom:5px}#rewardModal .modal-content{padding:10px}#rewardModal .close{position:absolute;right:15px;top:15px;color:rgba(0,0,0,.5);font-size:1.3rem;line-height:20px;cursor:pointer}#rewardModal .close:hover{color:#ef5350;transform:scale(1.3);-moz-transform:scale(1.3);-webkit-transform:scale(1.3);-o-transform:scale(1.3)}#rewardModal .reward-tabs{margin:0 auto;width:210px}.reward-tabs .tabs{height:38px;margin:10px auto;padding-left:0}.reward-content ul{padding-left:0!important}.reward-tabs .tabs .tab{height:38px;line-height:38px}.reward-tabs .tab a{color:#fff;background-color:#ccc}.reward-tabs .tab a:hover{background-color:#ccc;color:#fff}.reward-tabs .wechat-tab .active{color:#fff!important;background-color:#22AB38!important}.reward-tabs .alipay-tab .active{color:#fff!important;background-color:#019FE8!important}.reward-tabs .reward-img{width:210px;height:210px}</style><div id="reward"><a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a><div id="rewardModal" class="modal"><div class="modal-content"><a class="close modal-close"><i class="fas fa-times"></i></a><h4 class="reward-title">你的賞識是我前進的動力</h4><div class="reward-content"><div class="reward-tabs"><ul class="tabs row"><li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li><li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li></ul><div id="alipay"><img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码"></div><div id="wechat"><img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码"></div></div></div></div></div></div><script>$(function(){$(".tabs").tabs()})</script><div class="reprint" id="reprint-statement"><p class="reprint-tip"><i class="fas fa-exclamation-triangle"></i>&nbsp;&nbsp; <span>Reprint policy</span></p><div class="center-align"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a></div><br><a href="/2018/01/06/Amazon-Web-Service-30-days-19-Lambda/">《Amazon Web Service 30 days - 19 : Lambda》 </a>by <a href="https://blackie1019.github.io/new-blackie1019.github.io">Blackie </a>is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a></div><script async defer>document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }</script></div></div><div class="disqus-card card" data-aos="fade-up"><div id="disqus_thread" class="card-content"><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></div><script type="text/javascript">disqus_config = function () {
+        this.page.url = 'https://blackie1019.github.io/new-blackie1019.github.io/2018/01/06/Amazon-Web-Service-30-days-19-Lambda/';
+        this.page.identifier = '/2018/01/06/Amazon-Web-Service-30-days-19-Lambda/';
+        this.page.title = 'Amazon Web Service 30 days - 19 : Lambda';
+    };
+    let disqus_shortname = 'blackie1019';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();</script><article id="prenext-posts" class="prev-next articles"><div class="row article-row"><div class="article col s12 m6" data-aos="fade-up"><div class="article-badge left-badge text-color"><i class="fas fa-chevron-left"></i>&nbsp;Previous</div><div class="card"><a href="/2018/01/07/Amazon-Web-Service-30-days-20-API-Gateway/"><div class="card-image"><img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Amazon Web Service 30 days - 20 : API Gateway"> <span class="card-title">Amazon Web Service 30 days - 20 : API Gateway</span></div></a><div class="card-content article-content"><div class="summary block-with-text">30天鐵人賽介紹 AWS 雲端世界 - 20:　Lambda 搭配 API Gateway，實現 Serverless 架構可以被外部呼叫觸發What is API GatewayAPI Gateway 是一種全託管的服務，可讓開發人員輕鬆</div><div class="publish-info"><span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i>2018-01-08 </span><span class="publish-author"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/Cloud/" class="post-category">Cloud</a></span></div></div><div class="card-action article-tags"><a href="/tags/AWS/"><span class="chip bg-color">AWS</span></a></div></div></div><div class="article col s12 m6" data-aos="fade-up"><div class="article-badge right-badge text-color">Next&nbsp;<i class="fas fa-chevron-right"></i></div><div class="card"><a href="/2018/01/05/Amazon-Web-Service-30-days-18-Elastic-Beanstalk/"><div class="card-image"><img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Amazon Web Service 30 days - 18 : Elastic Beanstalk"> <span class="card-title">Amazon Web Service 30 days - 18 : Elastic Beanstalk</span></div></a><div class="card-content article-content"><div class="summary block-with-text">30天鐵人賽介紹 AWS 雲端世界 - 18:　讓程式開發人員能更專注開發的上線環境 Elastic BeanstalkWhat is Elastic BeanstalkElastic Beanstalk 是提供一個在 AWS 裡面簡單管理</div><div class="publish-info"><span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i>2018-01-06 </span><span class="publish-author"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/Cloud/" class="post-category">Cloud</a></span></div></div><div class="card-action article-tags"><a href="/tags/AWS/"><span class="chip bg-color">AWS</span></a></div></div></div></div></article></div></div><div id="toc-aside" class="expanded col l3 hide-on-med-and-down"><div class="toc-widget"><div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div><div id="toc-content"></div></div></div></div><div id="floating-toc-btn" class="hide-on-med-and-down"><a class="btn-floating btn-large bg-color"><i class="fas fa-list-ul"></i></a></div><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.8.0/tocbot.min.js"></script><script>$(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });</script></main><footer class="page-footer bg-color"><div class="container row center-align"><div class="col s12 m8 l8 copy-right">Copyright&nbsp;&copy; <span id="year">年份</span> <a href="https://blackie1019.github.io/new-blackie1019.github.io" target="_blank">Blackie Tsai</a> |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a><br>&nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span class="white-color">181.9k</span>&nbsp;字 <span id="busuanzi_container_site_pv">|&nbsp;<i class="far fa-eye"></i>&nbsp;Total Pageviews:&nbsp;<span id="busuanzi_value_site_pv" class="white-color"></span>&nbsp;次 </span><span id="busuanzi_container_site_uv">|&nbsp;<i class="fas fa-users"></i>&nbsp;Total Visitors:&nbsp;<span id="busuanzi_value_site_uv" class="white-color"></span>&nbsp;人</span><br><span id="sitetime">Loading...</span><script>function siteTime(){window.setTimeout("siteTime()",1e3);var e=1e3,t=60*e,n=60*t,o=24*n,i=365*o,r=new Date,a="2013",m="1",l="1",M="0",d="0",g="0",s=r.getFullYear(),T=r.getMonth()+1,u=r.getDate(),c=r.getHours(),f=r.getMinutes(),h=r.getSeconds(),y=Date.UTC(a,m,l,M,d,g),H=Date.UTC(s,T,u,c,f,h),I=H-y,B=Math.floor(I/i),D=Math.floor(I/o-365*B),E=Math.floor((I-(365*B+D)*o)/n),L=Math.floor((I-(365*B+D)*o-E*n)/t),w=Math.floor((I-(365*B+D)*o-E*n-L*t)/e);a==s?(document.getElementById("year").innerHTML=s,document.getElementById("sitetime").innerHTML="本站已安全運行 "+D+" 天 "+E+" 小時 "+L+" 分鐘 "+w+" 秒"):(document.getElementById("year").innerHTML=a+" - "+s,document.getElementById("sitetime").innerHTML="本站已安全運行 "+B+" 年 "+D+" 天 "+E+" 小時 "+L+" 分鐘 "+w+" 秒")}setInterval(siteTime,1e3)</script><br></div><div class="col s12 m4 l4 social-link social-statis"></div></div></footer><div class="progress-bar"></div><div id="searchModal" class="modal"><div class="modal-content"><div class="search-header"><span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span> <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input"></div><div id="searchResult"></div></div></div><script src="/js/search.js"></script><script type="text/javascript">$(function(){searchFunc("/search.xml","searchInput","searchResult")})</script><div id="backTop" class="top-scroll"><a class="btn-floating btn-large waves-effect waves-light" href="#!"><i class="fas fa-arrow-up"></i></a></div><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script><script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/scrollprogress/3.0.2/scrollProgress.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/js/lightgallery-all.min.js"></script><script src="/js/matery.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-38528893-3"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-38528893-3")</script><script>!function(){var t=document.createElement("script"),s=window.location.protocol.split(":")[0];"https"===s?t.src="https://zz.bdstatic.com/linksubmit/push.js":t.src="http://push.zhanzhang.baidu.com/push.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}()</script><script async src="/libs/others/busuanzi.pure.mini.js"></script><script>!function(e,t,o,c,i,a,n){e.DaoVoiceObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,a=t.createElement(o),n=t.getElementsByTagName(o)[0],a.async=1,a.src=c,a.charset="utf-8",n.parentNode.insertBefore(a,n)}(window,document,"script",("https:"==document.location.protocol?"https:":"http:")+"//widget.daovoice.io/widget/6984b559.js","daovoice"),daovoice("init",{app_id:""}),daovoice("update")</script><script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async></script></body></html><!-- rebuild by neat -->
