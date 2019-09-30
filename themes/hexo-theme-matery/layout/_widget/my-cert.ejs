@@ -1,0 +1,32 @@
+<%
+// the gallery photos of theme _config.yml.
+var certs = theme.myCerts.data;
+%>
+
+<div id="my-cert" class="my-gallery">
+    <div class="title center-align" data-aos="zoom-in-up">
+        <i class="far fa-image"></i>&nbsp;&nbsp;<%- __('certs') %>
+    </div>
+    <div class="row">
+        <% if (certs) { %>
+        <% Object.keys(certs).forEach(function(photo) { %>
+        <div class="center col s12 m6 l3" data-aos="fade-up">
+            <div class="img-item" data-src="<%- certs[photo] %>">
+                <img src="<%- certs[photo] %>" class="responsive-img">
+            </div>
+        </div>
+        <% }); %>
+        <% } %>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        let animateClass = 'animated pulse';
+        $('#myGallery .photo').hover(function () {
+            $(this).addClass(animateClass);
+        }, function () {
+            $(this).removeClass(animateClass);
+        });
+    });
+</script>
