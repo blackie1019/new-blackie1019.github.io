@@ -1,51 +1,27 @@
-[
-  {
-    "avatar": "http://image.luokangyuan.com/1_qq_27922023.jpg",
-    "name": "John Wu",
-    "introduction": "簡單不想寫，太難不會寫",
-    "url": "https://blog.johnwu.cc",
-    "title": "Visit Blog"
-  }, 
-  {
+[{
     "avatar": "http://image.luokangyuan.com/4027734.jpeg",
     "name": "Larry Nung",
     "introduction": "Level up",
-    "url": "https://larrynung.github.io",
-    "title": "Visit Blog"
+    "url": "http://larrynung.github.io",
+    "title": "Level up"
   },
   {
     "avatar": "http://image.luokangyuan.com/4027734.jpeg",
-    "name": "Yowko Tsi",
-    "introduction": "半路出家的web 工程師喜歡嘗試不同新技術,更喜歡寫程式帶來的成就感",
+    "name": "Yowko tsai",
+    "introduction": "半路出家的web 工程師喜歡嘗試不同新技術,更喜歡寫程式帶來的成就感.",
     "url": "https://blog.yowko.com/",
-    "title": "Visit Blog"
-  },
-  {
-    "avatar": "http://image.luokangyuan.com/4027734.jpeg",
-    "name": "Ryan Hsu",
-    "introduction": "Editor of Its Ok to Make Mistakes",
-    "url": "https://medium.com/@mvpdw06",
-    "title": "Visit Blog"
-  },
-  {
-    "avatar": "http://image.luokangyuan.com/4027734.jpeg",
-    "name": "Duran",
-    "introduction": "技術冶煉廠",
-    "url": "http://dog0416.blogspot.com/",
-    "title": "Visit Blog"
-  },
-  {
-    "avatar": "http://image.luokangyuan.com/4027734.jpeg",
-    "name": "Jed Lin",
-    "introduction": "寫程式是一件快樂的事，期許自己可以一輩子都能享受這種快樂",
+    "title": "學藝不精，請大家多指教"
+  }, {
+    "avatar": "http://image.luokangyuan.com/1_qq_27922023.jpg",
+    "name": "John Wu",
+    "introduction": "簡單不想寫，太難不會寫",
+    "url": "http://blog.johnwu.cc",
+    "title": "簡單不想寫，太難不會寫"
+  }, {
+    "avatar": "http://image.luokangyuan.com/avatar.jpg",
+    "name": "Jed",
+    "introduction": "大濕大師",
     "url": "https://jed1978.github.io/",
-    "title": "Visit Blog"
-  },
-  {
-    "avatar": "http://image.luokangyuan.com/4027734.jpeg",
-    "name": "Jimmy Wu",
-    "introduction": "不受限的技術狂人",
-    "url": "https://blog.jimmywu.cc",
-    "title": "Visit Blog"
+    "title": "大濕大師"
   }
 ]

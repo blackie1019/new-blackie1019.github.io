@@ -6,12 +6,6 @@
 
 > 这是一个采用 `Material Design` 和响应式设计的 Hexo 博客主题。
 
-## 贡献者
-
-感谢下面列出的贡献者，没有他们，hexo-theme-matery不会这么完美。
-
-- [@HarborZeng](https://github.com/HarborZeng)
-
 ## 特性
 
 - 简单漂亮，文章内容美观易读
@@ -31,6 +25,17 @@
 - [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/) 和 [Disqus](https://disqus.com/) 评论模块（推荐使用 `Gitalk`）
 - 集成了[不蒜子统计](http://busuanzi.ibruce.info/)、谷歌分析（`Google Analytics`）和文章字数统计等功能
 - 支持在首页的音乐播放和视频播放功能
+- 支持`emoji`表情，用`markdown emoji`语法书写直接生成对应的能**跳跃**的表情。
+- 支持 [DaoVoice](http://www.daovoice.io/) 在线聊天功能。
+
+## 贡献者
+
+感谢下面列出的贡献者，没有他们，hexo-theme-matery 不会这么完美。
+
+- [@HarborZeng](https://github.com/HarborZeng)
+- [@shw2018](https://github.com/shw2018)
+- [@L1cardo](https://github.com/L1cardo)
+- [@Five-great](https://github.com/Five-great)
 
 ## 下载
 
@@ -113,6 +118,27 @@ layout: "about"
 ---
 ```
 
+### 新建留言板 contact 页（可选的）
+
+`contact` 页是用来展示**留言板**信息的页面，如果在你的博客 `source` 目录下还没有 `contact/index.md` 文件，那么你就需要新建一个，命令如下：
+
+```bash
+hexo new page "contact"
+```
+
+编辑你刚刚新建的页面文件 `/source/contact/index.md`，至少需要以下内容：
+
+```yaml
+---
+title: contact
+date: 2018-09-30 17:25:30
+type: "contact"
+layout: "contact"
+---
+```
+
+> **注**：本留言板功能依赖于第三方评论系统，请**激活**你的评论系统才有效果。并且在主题的 `_config.yml` 文件中，第 `19` 至 `21` 行的“**菜单**”配置，取消关于留言板的注释即可。
+
 ### 新建友情连接 friends 页（可选的）
 
 `friends` 页是用来展示**友情连接**信息的页面，如果在你的博客 `source` 目录下还没有 `friends/index.md` 文件，那么你就需要新建一个，命令如下：
@@ -151,10 +177,31 @@ layout: "friends"
     "avatar": "http://image.luokangyuan.com/avatar.jpg",
     "name": "ja_rome",
     "introduction": "平凡的脚步也可以走出伟大的行程",
-    "url": "ttps://me.csdn.net/jlh912008548",
+    "url": "https://me.csdn.net/jlh912008548",
     "title": "前去学习"
 }]
 ```
+
+### 添加emoji表情支持（可选的）
+
+本主题新增了对`emoji`表情的支持，使用到了 [hexo-filter-github-emojis](https://npm.taobao.org/package/hexo-filter-github-emojis) 的 Hexo 插件来支持 `emoji`表情的生成，把对应的`markdown emoji`语法（`::`,例如：`:smile:`）转变成会跳跃的`emoji`表情，安装命令如下：
+
+```bash
+npm install hexo-filter-github-emojis --save
+```
+
+在 Hexo 根目录下的 `_config.yml` 文件中，新增以下的配置项：
+
+```yaml
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+```
+
+执行 `hexo clean && hexo g` 重新生成博客文件，然后就可以在文章中对应位置看到你用`emoji`语法写的表情了。
 
 ### 代码高亮
 
@@ -256,6 +303,14 @@ feed:
 ```
 
 执行 `hexo clean && hexo g` 重新生成博客文件，然后在 `public` 文件夹中即可看到 `atom.xml` 文件，说明你已经安装成功了。
+
+### 添加 [DaoVoice](http://www.daovoice.io/) 在线聊天功能（可选的）
+
+前往 [DaoVoice](http://www.daovoice.io/) 官网注册并且获取 `app_id`，并将 `app_id` 填入主题的 `_config.yml` 文件中。
+
+### 添加 [Tidio](https://www.tidio.com/) 在线聊天功能（可选的）
+
+前往 [Tidio](https://www.tidio.com/) 官网注册并且获取 `Public Key`，并将 `Public Key` 填入主题的 `_config.yml` 文件中。
 
 ### 修改页脚
 
@@ -466,6 +521,18 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ## 版本记录
 
+- v1.1.0
+  - 新增了 `emoji` 的支持；
+  - 新增了站点运行时间统计及配置；
+  - 新增了留言板的功能,默认未开启；
+  - 新增了 `Twitter`、`Facebook`、知乎的社交链接；
+  - 更新了 `Valine` 的版本为最新版；
+  - 其他小细节的修改；
+- v1.0.4
+  - 新增了能为每篇文章都自定义转载规则的功能；
+  - 修复上一页、下一页的自定义 `summary` 不显示的问题；
+  - 修复了友情链接显示错位的问题，改为了瀑布流的布局方式；
+  - 其他小细节 bug 的修改；
 - v1.0.3
   - 新增了`TOC`展开、收缩的按钮和相关配置，默认显示此按钮；
 - v1.0.2

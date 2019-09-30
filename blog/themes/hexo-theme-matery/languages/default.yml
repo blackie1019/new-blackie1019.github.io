@@ -5,6 +5,7 @@ tag: Tag
 tags: Tags
 archives: Archives
 about: About
+contact: Contact
 friends: Friends
 startRead: Start
 recommendedPosts: Recommended Posts
@@ -27,6 +28,7 @@ categoryRadarTitle: Post Categories Radar Chart
 categoryNumber: Number of Categories
 categoryEmptyTip: Your posts has no categories information yet.
 postCharts: Post Charts
+certs: Certifications & Awards
 postPublishChart: Post Publish Chart
 categoriesChart: Categories Chart
 top10TagsChart: TOP10 Tags Chart
