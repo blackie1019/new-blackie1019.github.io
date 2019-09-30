@@ -3,11 +3,11 @@
   <title>Blackie&#39;s Failed Notes</title>
   
   <subtitle>Show me. Don&#39;t tell me.</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/new-blackie1019.github.io/atom.xml" rel="self"/>
   
-  <link href="https://blackie1019.github.io/new-blackie1019.github.io/"/>
-  <updated>2019-09-30T15:35:39.474Z</updated>
-  <id>https://blackie1019.github.io/new-blackie1019.github.io/</id>
+  <link href="https://blackie1019.github.io/"/>
+  <updated>2019-09-30T16:13:22.457Z</updated>
+  <id>https://blackie1019.github.io/</id>
   
   <author>
     <name>Blackie Tsai</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Protobuf Development(.proto) on Visual Studio Code</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2019/03/22/Protobuf-Development-proto-on-Visual-Studio-Code/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2019/03/22/Protobuf-Development-proto-on-Visual-Studio-Code/</id>
+    <link href="https://blackie1019.github.io/2019/03/22/Protobuf-Development-proto-on-Visual-Studio-Code/"/>
+    <id>https://blackie1019.github.io/2019/03/22/Protobuf-Development-proto-on-Visual-Studio-Code/</id>
     <published>2019-03-22T15:19:26.000Z</published>
-    <updated>2019-09-30T15:35:39.474Z</updated>
+    <updated>2019-09-30T16:13:22.457Z</updated>
     
     <summary type="html">
     
@@ -29,28 +29,28 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;紀錄一下 Visual Studio 如何支援 .proto 檔案的撰寫&lt;/p&gt;&lt;p&gt;近期在大量以 gRPC
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;紀錄一下 Visual Studio 如何支援 .proto 檔案的撰寫&lt;/p&gt;&lt;p&gt;近期在大量以 gRPC
         
       
     
     </summary>
     
     
-      <category term="Tool" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/Tool/"/>
+      <category term="Tool" scheme="https://blackie1019.github.io/categories/Tool/"/>
     
     
-      <category term="gRPC" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/gRPC/"/>
+      <category term="gRPC" scheme="https://blackie1019.github.io/tags/gRPC/"/>
     
-      <category term="Protobuf" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Protobuf/"/>
+      <category term="Protobuf" scheme="https://blackie1019.github.io/tags/Protobuf/"/>
     
   </entry>
   
   <entry>
     <title>Running consul in a container with UI and Development Mode</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2019/03/21/Running-consul-in-a-container-with-UI-and-Development-Mode/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2019/03/21/Running-consul-in-a-container-with-UI-and-Development-Mode/</id>
+    <link href="https://blackie1019.github.io/2019/03/21/Running-consul-in-a-container-with-UI-and-Development-Mode/"/>
+    <id>https://blackie1019.github.io/2019/03/21/Running-consul-in-a-container-with-UI-and-Development-Mode/</id>
     <published>2019-03-21T16:31:22.000Z</published>
-    <updated>2019-09-30T15:35:39.578Z</updated>
+    <updated>2019-09-30T16:13:22.577Z</updated>
     
     <summary type="html">
     
@@ -58,7 +58,7 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;記錄如何在容器內簡單啟動 Consul 的 Development Mode 與 UI
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;記錄如何在容器內簡單啟動 Consul 的 Development Mode 與 UI
         
       
     
@@ -70,10 +70,10 @@
   
   <entry>
     <title>gRPC development on .NET Core - Integration into .NET Build(.csproj)</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2019/03/18/gRPC-development-on-NET-Core-Integration-into-NET-Build-csproj/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2019/03/18/gRPC-development-on-NET-Core-Integration-into-NET-Build-csproj/</id>
+    <link href="https://blackie1019.github.io/2019/03/18/gRPC-development-on-NET-Core-Integration-into-NET-Build-csproj/"/>
+    <id>https://blackie1019.github.io/2019/03/18/gRPC-development-on-NET-Core-Integration-into-NET-Build-csproj/</id>
     <published>2019-03-18T15:29:30.000Z</published>
-    <updated>2019-09-30T15:35:39.886Z</updated>
+    <updated>2019-09-30T16:13:22.933Z</updated>
     
     <summary type="html">
     
@@ -81,34 +81,34 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:14 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何將 gRPC 整合至 .NET Core 的專案檔(.csproj) 內．&lt;/p&gt;&lt;p&gt;延續先前兩篇
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何將 gRPC 整合至 .NET Core 的專案檔(.csproj) 內．&lt;/p&gt;&lt;p&gt;延續先前兩篇
         
       
     
     </summary>
     
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/categories/NET/"/>
     
     
-      <category term=".NET Core" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET-Core/"/>
+      <category term=".NET Core" scheme="https://blackie1019.github.io/tags/NET-Core/"/>
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/tags/NET/"/>
     
-      <category term="gRPC" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/gRPC/"/>
+      <category term="gRPC" scheme="https://blackie1019.github.io/tags/gRPC/"/>
     
-      <category term="Protobuf" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Protobuf/"/>
+      <category term="Protobuf" scheme="https://blackie1019.github.io/tags/Protobuf/"/>
     
-      <category term="Microservice" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Microservice/"/>
+      <category term="Microservice" scheme="https://blackie1019.github.io/tags/Microservice/"/>
     
   </entry>
   
   <entry>
     <title>Secured Password with PBKDF2 on C#</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2019/02/21/Secured-Password-with-PBKDF2-on-C/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2019/02/21/Secured-Password-with-PBKDF2-on-C/</id>
+    <link href="https://blackie1019.github.io/2019/02/21/Secured-Password-with-PBKDF2-on-C/"/>
+    <id>https://blackie1019.github.io/2019/02/21/Secured-Password-with-PBKDF2-on-C/</id>
     <published>2019-02-21T23:44:57.000Z</published>
-    <updated>2019-09-30T15:35:39.590Z</updated>
+    <updated>2019-09-30T16:13:22.589Z</updated>
     
     <summary type="html">
     
@@ -116,34 +116,34 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何使用 PBKDF2
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何使用 PBKDF2
         
       
     
     </summary>
     
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/categories/NET/"/>
     
     
-      <category term=".NET Core" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET-Core/"/>
+      <category term=".NET Core" scheme="https://blackie1019.github.io/tags/NET-Core/"/>
     
-      <category term="C#" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/C/"/>
+      <category term="C#" scheme="https://blackie1019.github.io/tags/C/"/>
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/tags/NET/"/>
     
-      <category term="PBKDF2" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/PBKDF2/"/>
+      <category term="PBKDF2" scheme="https://blackie1019.github.io/tags/PBKDF2/"/>
     
-      <category term="Cryptography" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Cryptography/"/>
+      <category term="Cryptography" scheme="https://blackie1019.github.io/tags/Cryptography/"/>
     
   </entry>
   
   <entry>
     <title>.NET Core load appsettings.development.json</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2019/02/13/NET-Core-load-appsettings-development-json/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2019/02/13/NET-Core-load-appsettings-development-json/</id>
+    <link href="https://blackie1019.github.io/2019/02/13/NET-Core-load-appsettings-development-json/"/>
+    <id>https://blackie1019.github.io/2019/02/13/NET-Core-load-appsettings-development-json/</id>
     <published>2019-02-13T17:37:21.000Z</published>
-    <updated>2019-09-30T15:35:39.378Z</updated>
+    <updated>2019-09-30T16:13:22.349Z</updated>
     
     <summary type="html">
     
@@ -151,28 +151,28 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;分享如何讓 .NET Core 應用程式讀出 appsetting.development.json
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;分享如何讓 .NET Core 應用程式讀出 appsetting.development.json
         
       
     
     </summary>
     
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/categories/NET/"/>
     
     
-      <category term=".NET Core" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET-Core/"/>
+      <category term=".NET Core" scheme="https://blackie1019.github.io/tags/NET-Core/"/>
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/tags/NET/"/>
     
   </entry>
   
   <entry>
     <title>gRPC development on .NET Core - GUI Tool for Testing</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2019/02/12/gRPC-development-on-NET-Core-GUI-Tool-for-Testing/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2019/02/12/gRPC-development-on-NET-Core-GUI-Tool-for-Testing/</id>
+    <link href="https://blackie1019.github.io/2019/02/12/gRPC-development-on-NET-Core-GUI-Tool-for-Testing/"/>
+    <id>https://blackie1019.github.io/2019/02/12/gRPC-development-on-NET-Core-GUI-Tool-for-Testing/</id>
     <published>2019-02-12T16:51:09.000Z</published>
-    <updated>2019-09-30T15:35:39.878Z</updated>
+    <updated>2019-09-30T16:13:22.925Z</updated>
     
     <summary type="html">
     
@@ -180,34 +180,34 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:14 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何使用 gRPC 的 GUI 工具 - BloomRPC 協助 .NET Core 開發 gRPC
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何使用 gRPC 的 GUI 工具 - BloomRPC 協助 .NET Core 開發 gRPC
         
       
     
     </summary>
     
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/categories/NET/"/>
     
     
-      <category term=".NET Core" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET-Core/"/>
+      <category term=".NET Core" scheme="https://blackie1019.github.io/tags/NET-Core/"/>
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/tags/NET/"/>
     
-      <category term="gRPC" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/gRPC/"/>
+      <category term="gRPC" scheme="https://blackie1019.github.io/tags/gRPC/"/>
     
-      <category term="Protobuf" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Protobuf/"/>
+      <category term="Protobuf" scheme="https://blackie1019.github.io/tags/Protobuf/"/>
     
-      <category term="Microservice" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Microservice/"/>
+      <category term="Microservice" scheme="https://blackie1019.github.io/tags/Microservice/"/>
     
   </entry>
   
   <entry>
     <title>gRPC development on .NET Core - Basic</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2019/02/10/gRPC-development-on-NET-Core-Basic/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2019/02/10/gRPC-development-on-NET-Core-Basic/</id>
+    <link href="https://blackie1019.github.io/2019/02/10/gRPC-development-on-NET-Core-Basic/"/>
+    <id>https://blackie1019.github.io/2019/02/10/gRPC-development-on-NET-Core-Basic/</id>
     <published>2019-02-10T16:40:06.000Z</published>
-    <updated>2019-09-30T15:35:39.850Z</updated>
+    <updated>2019-09-30T16:13:22.893Z</updated>
     
     <summary type="html">
     
@@ -215,34 +215,34 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:14 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何在 .NET Core 中開發 gRPC 應用程式 - 基礎入門&lt;/p&gt;&lt;p&gt;&lt;img
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何在 .NET Core 中開發 gRPC 應用程式 - 基礎入門&lt;/p&gt;&lt;p&gt;&lt;img
         
       
     
     </summary>
     
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/categories/NET/"/>
     
     
-      <category term=".NET Core" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET-Core/"/>
+      <category term=".NET Core" scheme="https://blackie1019.github.io/tags/NET-Core/"/>
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/tags/NET/"/>
     
-      <category term="gRPC" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/gRPC/"/>
+      <category term="gRPC" scheme="https://blackie1019.github.io/tags/gRPC/"/>
     
-      <category term="Protobuf" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Protobuf/"/>
+      <category term="Protobuf" scheme="https://blackie1019.github.io/tags/Protobuf/"/>
     
-      <category term="Microservice" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Microservice/"/>
+      <category term="Microservice" scheme="https://blackie1019.github.io/tags/Microservice/"/>
     
   </entry>
   
   <entry>
     <title>Debugging Redis Lua Script with C# on macOS</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2019/01/13/Debugging-Redis-Lua-Script-with-C-on-macOS/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2019/01/13/Debugging-Redis-Lua-Script-with-C-on-macOS/</id>
+    <link href="https://blackie1019.github.io/2019/01/13/Debugging-Redis-Lua-Script-with-C-on-macOS/"/>
+    <id>https://blackie1019.github.io/2019/01/13/Debugging-Redis-Lua-Script-with-C-on-macOS/</id>
     <published>2019-01-13T06:20:07.000Z</published>
-    <updated>2019-09-30T15:35:39.086Z</updated>
+    <updated>2019-09-30T16:13:22.033Z</updated>
     
     <summary type="html">
     
@@ -250,36 +250,36 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;分享如何在 .NET Core 使用 C# 正確的使用 Redis Lua Script
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;分享如何在 .NET Core 使用 C# 正確的使用 Redis Lua Script
         
       
     
     </summary>
     
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/categories/NET/"/>
     
     
-      <category term=".NET Core" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET-Core/"/>
+      <category term=".NET Core" scheme="https://blackie1019.github.io/tags/NET-Core/"/>
     
-      <category term="C#" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/C/"/>
+      <category term="C#" scheme="https://blackie1019.github.io/tags/C/"/>
     
-      <category term="Redis" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Redis/"/>
+      <category term="Redis" scheme="https://blackie1019.github.io/tags/Redis/"/>
     
-      <category term="Lua Script" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Lua-Script/"/>
+      <category term="Lua Script" scheme="https://blackie1019.github.io/tags/Lua-Script/"/>
     
-      <category term="ZeroBrane Studio" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/ZeroBrane-Studio/"/>
+      <category term="ZeroBrane Studio" scheme="https://blackie1019.github.io/tags/ZeroBrane-Studio/"/>
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/tags/NET/"/>
     
   </entry>
   
   <entry>
     <title>MariaDB/MySQL collaborative development with Docker-Compose/Container</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2018/11/14/MariaDB-MySQL-collaborative-development-with-Docker-Compose-Container/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2018/11/14/MariaDB-MySQL-collaborative-development-with-Docker-Compose-Container/</id>
+    <link href="https://blackie1019.github.io/2018/11/14/MariaDB-MySQL-collaborative-development-with-Docker-Compose-Container/"/>
+    <id>https://blackie1019.github.io/2018/11/14/MariaDB-MySQL-collaborative-development-with-Docker-Compose-Container/</id>
     <published>2018-11-14T03:01:09.000Z</published>
-    <updated>2019-09-30T15:35:39.342Z</updated>
+    <updated>2019-09-30T16:13:22.309Z</updated>
     
     <summary type="html">
     
@@ -287,32 +287,32 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;記錄如何透過 docker-compose 使用 MySQL/MariaDB
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;記錄如何透過 docker-compose 使用 MySQL/MariaDB
         
       
     
     </summary>
     
     
-      <category term="Container" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/Container/"/>
+      <category term="Container" scheme="https://blackie1019.github.io/categories/Container/"/>
     
     
-      <category term="Docker" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Docker/"/>
+      <category term="Docker" scheme="https://blackie1019.github.io/tags/Docker/"/>
     
-      <category term="Container" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Container/"/>
+      <category term="Container" scheme="https://blackie1019.github.io/tags/Container/"/>
     
-      <category term="MySQL" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="https://blackie1019.github.io/tags/MySQL/"/>
     
-      <category term="MariaDB" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/MariaDB/"/>
+      <category term="MariaDB" scheme="https://blackie1019.github.io/tags/MariaDB/"/>
     
   </entry>
   
   <entry>
     <title>MariaDB/MySQL dump SQL for Docker/Container</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2018/11/13/MariaDB-MySQL-dump-SQL-for-Docker-Container/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2018/11/13/MariaDB-MySQL-dump-SQL-for-Docker-Container/</id>
+    <link href="https://blackie1019.github.io/2018/11/13/MariaDB-MySQL-dump-SQL-for-Docker-Container/"/>
+    <id>https://blackie1019.github.io/2018/11/13/MariaDB-MySQL-dump-SQL-for-Docker-Container/</id>
     <published>2018-11-13T14:25:13.000Z</published>
-    <updated>2019-09-30T15:35:39.342Z</updated>
+    <updated>2019-09-30T16:13:22.309Z</updated>
     
     <summary type="html">
     
@@ -320,32 +320,32 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;記錄如何將運行中的容器化 MySQL/MariaDB 資料匯出至其他容器內的 DB Instance
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;記錄如何將運行中的容器化 MySQL/MariaDB 資料匯出至其他容器內的 DB Instance
         
       
     
     </summary>
     
     
-      <category term="Container" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/Container/"/>
+      <category term="Container" scheme="https://blackie1019.github.io/categories/Container/"/>
     
     
-      <category term="Docker" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Docker/"/>
+      <category term="Docker" scheme="https://blackie1019.github.io/tags/Docker/"/>
     
-      <category term="Container" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Container/"/>
+      <category term="Container" scheme="https://blackie1019.github.io/tags/Container/"/>
     
-      <category term="MySQL" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="https://blackie1019.github.io/tags/MySQL/"/>
     
-      <category term="MariaDB" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/MariaDB/"/>
+      <category term="MariaDB" scheme="https://blackie1019.github.io/tags/MariaDB/"/>
     
   </entry>
   
   <entry>
     <title>MariaDB/MySQL Transaction with .NET Standard</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2018/11/07/MariaDB-MySQL-Transaction-with-NET-Standard/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2018/11/07/MariaDB-MySQL-Transaction-with-NET-Standard/</id>
+    <link href="https://blackie1019.github.io/2018/11/07/MariaDB-MySQL-Transaction-with-NET-Standard/"/>
+    <id>https://blackie1019.github.io/2018/11/07/MariaDB-MySQL-Transaction-with-NET-Standard/</id>
     <published>2018-11-07T14:47:41.000Z</published>
-    <updated>2019-09-30T15:35:39.330Z</updated>
+    <updated>2019-09-30T16:13:22.301Z</updated>
     
     <summary type="html">
     
@@ -353,36 +353,36 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何使用 MySqlConnector 讓 .NET Standard/.NET Core 可以對
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何使用 MySqlConnector 讓 .NET Standard/.NET Core 可以對
         
       
     
     </summary>
     
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/categories/NET/"/>
     
     
-      <category term=".NET Core" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET-Core/"/>
+      <category term=".NET Core" scheme="https://blackie1019.github.io/tags/NET-Core/"/>
     
-      <category term="C#" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/C/"/>
+      <category term="C#" scheme="https://blackie1019.github.io/tags/C/"/>
     
-      <category term=".NET Standard" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET-Standard/"/>
+      <category term=".NET Standard" scheme="https://blackie1019.github.io/tags/NET-Standard/"/>
     
-      <category term="MySQL" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="https://blackie1019.github.io/tags/MySQL/"/>
     
-      <category term="MariaDB" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/MariaDB/"/>
+      <category term="MariaDB" scheme="https://blackie1019.github.io/tags/MariaDB/"/>
     
-      <category term="Transaction" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Transaction/"/>
+      <category term="Transaction" scheme="https://blackie1019.github.io/tags/Transaction/"/>
     
   </entry>
   
   <entry>
     <title>[Rider] Shared Window Tools Layout in different Projects/Solutions</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2018/10/09/Rider-Shared-Window-Tools-Layout-in-different-Projects-Solutions/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2018/10/09/Rider-Shared-Window-Tools-Layout-in-different-Projects-Solutions/</id>
+    <link href="https://blackie1019.github.io/2018/10/09/Rider-Shared-Window-Tools-Layout-in-different-Projects-Solutions/"/>
+    <id>https://blackie1019.github.io/2018/10/09/Rider-Shared-Window-Tools-Layout-in-different-Projects-Solutions/</id>
     <published>2018-10-09T03:31:14.000Z</published>
-    <updated>2019-09-30T15:35:39.534Z</updated>
+    <updated>2019-09-30T16:13:22.525Z</updated>
     
     <summary type="html">
     
@@ -390,26 +390,26 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;記錄如何使用 Rider 分享當前設定與視窗調整的樣貌到不同專案或是解決方案內&lt;/p&gt;&lt;p&gt;常使用
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;記錄如何使用 Rider 分享當前設定與視窗調整的樣貌到不同專案或是解決方案內&lt;/p&gt;&lt;p&gt;常使用
         
       
     
     </summary>
     
     
-      <category term="Tool" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/Tool/"/>
+      <category term="Tool" scheme="https://blackie1019.github.io/categories/Tool/"/>
     
     
-      <category term="Rider" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Rider/"/>
+      <category term="Rider" scheme="https://blackie1019.github.io/tags/Rider/"/>
     
   </entry>
   
   <entry>
     <title>Basic MariaDB/MySQL Stored Procedure with .NET Standard</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2018/10/08/Basic-MariaDB-MySQL-Stored-Procedure-with-NET-Standard/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2018/10/08/Basic-MariaDB-MySQL-Stored-Procedure-with-NET-Standard/</id>
+    <link href="https://blackie1019.github.io/2018/10/08/Basic-MariaDB-MySQL-Stored-Procedure-with-NET-Standard/"/>
+    <id>https://blackie1019.github.io/2018/10/08/Basic-MariaDB-MySQL-Stored-Procedure-with-NET-Standard/</id>
     <published>2018-10-08T06:27:04.000Z</published>
-    <updated>2019-09-30T15:35:39.046Z</updated>
+    <updated>2019-09-30T16:13:21.989Z</updated>
     
     <summary type="html">
     
@@ -417,34 +417,34 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何使用 &lt;em&gt;MySqlConnector&lt;/em&gt; 讓 .NET Standard/.NET
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何使用 &lt;em&gt;MySqlConnector&lt;/em&gt; 讓 .NET Standard/.NET
         
       
     
     </summary>
     
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/categories/NET/"/>
     
     
-      <category term=".NET Core" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET-Core/"/>
+      <category term=".NET Core" scheme="https://blackie1019.github.io/tags/NET-Core/"/>
     
-      <category term="C#" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/C/"/>
+      <category term="C#" scheme="https://blackie1019.github.io/tags/C/"/>
     
-      <category term=".NET Standard" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET-Standard/"/>
+      <category term=".NET Standard" scheme="https://blackie1019.github.io/tags/NET-Standard/"/>
     
-      <category term="MySQL" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="https://blackie1019.github.io/tags/MySQL/"/>
     
-      <category term="MariaDB" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/MariaDB/"/>
+      <category term="MariaDB" scheme="https://blackie1019.github.io/tags/MariaDB/"/>
     
   </entry>
   
   <entry>
     <title>Basic MariaDB/MySQL CRUD with .NET Standard</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2018/10/05/Basic-MariaDB-MySQL-CRUD-with-NET-Standard/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2018/10/05/Basic-MariaDB-MySQL-CRUD-with-NET-Standard/</id>
+    <link href="https://blackie1019.github.io/2018/10/05/Basic-MariaDB-MySQL-CRUD-with-NET-Standard/"/>
+    <id>https://blackie1019.github.io/2018/10/05/Basic-MariaDB-MySQL-CRUD-with-NET-Standard/</id>
     <published>2018-10-05T16:10:38.000Z</published>
-    <updated>2019-09-30T15:35:39.038Z</updated>
+    <updated>2019-09-30T16:13:21.981Z</updated>
     
     <summary type="html">
     
@@ -452,34 +452,34 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何使用 &lt;em&gt;MySqlConnector&lt;/em&gt; 讓 .NET Standard/.NET
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;介紹如何使用 &lt;em&gt;MySqlConnector&lt;/em&gt; 讓 .NET Standard/.NET
         
       
     
     </summary>
     
     
-      <category term=".NET" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/NET/"/>
+      <category term=".NET" scheme="https://blackie1019.github.io/categories/NET/"/>
     
     
-      <category term=".NET Core" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET-Core/"/>
+      <category term=".NET Core" scheme="https://blackie1019.github.io/tags/NET-Core/"/>
     
-      <category term="C#" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/C/"/>
+      <category term="C#" scheme="https://blackie1019.github.io/tags/C/"/>
     
-      <category term=".NET Standard" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/NET-Standard/"/>
+      <category term=".NET Standard" scheme="https://blackie1019.github.io/tags/NET-Standard/"/>
     
-      <category term="MySQL" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="https://blackie1019.github.io/tags/MySQL/"/>
     
-      <category term="MariaDB" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/MariaDB/"/>
+      <category term="MariaDB" scheme="https://blackie1019.github.io/tags/MariaDB/"/>
     
   </entry>
   
   <entry>
     <title>[Rider] Introduce live templates &amp; file templates</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2018/10/04/Rider-Introduce-live-templates-file-templates/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2018/10/04/Rider-Introduce-live-templates-file-templates/</id>
+    <link href="https://blackie1019.github.io/2018/10/04/Rider-Introduce-live-templates-file-templates/"/>
+    <id>https://blackie1019.github.io/2018/10/04/Rider-Introduce-live-templates-file-templates/</id>
     <published>2018-10-04T08:51:42.000Z</published>
-    <updated>2019-09-30T15:35:39.502Z</updated>
+    <updated>2019-09-30T16:13:22.489Z</updated>
     
     <summary type="html">
     
@@ -487,26 +487,26 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;紀錄 Rider 如何透過 &lt;em&gt;Live templates&lt;/em&gt; 與 &lt;em&gt;File
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;紀錄 Rider 如何透過 &lt;em&gt;Live templates&lt;/em&gt; 與 &lt;em&gt;File
         
       
     
     </summary>
     
     
-      <category term="Tool" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/Tool/"/>
+      <category term="Tool" scheme="https://blackie1019.github.io/categories/Tool/"/>
     
     
-      <category term="Rider" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Rider/"/>
+      <category term="Rider" scheme="https://blackie1019.github.io/tags/Rider/"/>
     
   </entry>
   
   <entry>
     <title>macOS occurred problem when installation -  missing xcrun issue</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2018/10/04/macOS-occurred-problem-when-installation-missing-xcrun-issue/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2018/10/04/macOS-occurred-problem-when-installation-missing-xcrun-issue/</id>
+    <link href="https://blackie1019.github.io/2018/10/04/macOS-occurred-problem-when-installation-missing-xcrun-issue/"/>
+    <id>https://blackie1019.github.io/2018/10/04/macOS-occurred-problem-when-installation-missing-xcrun-issue/</id>
     <published>2018-10-04T01:26:25.000Z</published>
-    <updated>2019-09-30T15:35:40.002Z</updated>
+    <updated>2019-09-30T16:13:23.065Z</updated>
     
     <summary type="html">
     
@@ -514,26 +514,26 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:14 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;分享如何解決在 macOS 安裝其他軟體或工具遇到 missing xcrun
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;分享如何解決在 macOS 安裝其他軟體或工具遇到 missing xcrun
         
       
     
     </summary>
     
     
-      <category term="Tool" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/Tool/"/>
+      <category term="Tool" scheme="https://blackie1019.github.io/categories/Tool/"/>
     
     
-      <category term="macOS" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/macOS/"/>
+      <category term="macOS" scheme="https://blackie1019.github.io/tags/macOS/"/>
     
   </entry>
   
   <entry>
     <title>Short-cut for C# Implement Methods of an Interface or Abstract Class</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2018/09/16/Short-cut-for-C-Sharp-Implement-Methods-of-an-Interface-or-Abstract-Class/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2018/09/16/Short-cut-for-C-Sharp-Implement-Methods-of-an-Interface-or-Abstract-Class/</id>
+    <link href="https://blackie1019.github.io/2018/09/16/Short-cut-for-C-Sharp-Implement-Methods-of-an-Interface-or-Abstract-Class/"/>
+    <id>https://blackie1019.github.io/2018/09/16/Short-cut-for-C-Sharp-Implement-Methods-of-an-Interface-or-Abstract-Class/</id>
     <published>2018-09-16T02:20:41.000Z</published>
-    <updated>2019-09-30T15:35:39.590Z</updated>
+    <updated>2019-09-30T16:13:22.593Z</updated>
     
     <summary type="html">
     
@@ -541,30 +541,30 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;記錄如何在開發工具使用快捷鍵實作繼承抽象類別與方法&lt;/p&gt;&lt;p&gt;在 &lt;em&gt;OOP&lt;/em&gt;
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;記錄如何在開發工具使用快捷鍵實作繼承抽象類別與方法&lt;/p&gt;&lt;p&gt;在 &lt;em&gt;OOP&lt;/em&gt;
         
       
     
     </summary>
     
     
-      <category term="Tool" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/Tool/"/>
+      <category term="Tool" scheme="https://blackie1019.github.io/categories/Tool/"/>
     
     
-      <category term="C#" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/C/"/>
+      <category term="C#" scheme="https://blackie1019.github.io/tags/C/"/>
     
-      <category term="Visual Studio" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Visual-Studio/"/>
+      <category term="Visual Studio" scheme="https://blackie1019.github.io/tags/Visual-Studio/"/>
     
-      <category term="Rider" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Rider/"/>
+      <category term="Rider" scheme="https://blackie1019.github.io/tags/Rider/"/>
     
   </entry>
   
   <entry>
     <title>Use Portainer Manage Multiple Docker Registry </title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2018/09/05/Use-Portainer-Manage-Multiple-Docker-Registry/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2018/09/05/Use-Portainer-Manage-Multiple-Docker-Registry/</id>
+    <link href="https://blackie1019.github.io/2018/09/05/Use-Portainer-Manage-Multiple-Docker-Registry/"/>
+    <id>https://blackie1019.github.io/2018/09/05/Use-Portainer-Manage-Multiple-Docker-Registry/</id>
     <published>2018-09-05T04:31:46.000Z</published>
-    <updated>2019-09-30T15:35:39.614Z</updated>
+    <updated>2019-09-30T16:13:22.621Z</updated>
     
     <summary type="html">
     
@@ -572,30 +572,30 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:14 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;分享一下如何使用 Portainer 輕鬆管理多個 Docker Registry&lt;/p&gt;&lt;p&gt;Docker
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;分享一下如何使用 Portainer 輕鬆管理多個 Docker Registry&lt;/p&gt;&lt;p&gt;Docker
         
       
     
     </summary>
     
     
-      <category term="Virtualization" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/Virtualization/"/>
+      <category term="Virtualization" scheme="https://blackie1019.github.io/categories/Virtualization/"/>
     
     
-      <category term="Docker" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Docker/"/>
+      <category term="Docker" scheme="https://blackie1019.github.io/tags/Docker/"/>
     
-      <category term="Container" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Container/"/>
+      <category term="Container" scheme="https://blackie1019.github.io/tags/Container/"/>
     
-      <category term="Docker Registry" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Docker-Registry/"/>
+      <category term="Docker Registry" scheme="https://blackie1019.github.io/tags/Docker-Registry/"/>
     
   </entry>
   
   <entry>
     <title>gitignore command line and rider .gitignore plugin </title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2018/09/05/gitignore-command-line-and-rider-gitignore-plugin/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2018/09/05/gitignore-command-line-and-rider-gitignore-plugin/</id>
+    <link href="https://blackie1019.github.io/2018/09/05/gitignore-command-line-and-rider-gitignore-plugin/"/>
+    <id>https://blackie1019.github.io/2018/09/05/gitignore-command-line-and-rider-gitignore-plugin/</id>
     <published>2018-09-05T02:10:27.000Z</published>
-    <updated>2019-09-30T15:35:39.918Z</updated>
+    <updated>2019-09-30T16:13:22.973Z</updated>
     
     <summary type="html">
     
@@ -603,30 +603,30 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:14 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;分享 git ignore CLI 工具與 Rider 的 .gitignore
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;分享 git ignore CLI 工具與 Rider 的 .gitignore
         
       
     
     </summary>
     
     
-      <category term="Tool" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/Tool/"/>
+      <category term="Tool" scheme="https://blackie1019.github.io/categories/Tool/"/>
     
     
-      <category term="Rider" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Rider/"/>
+      <category term="Rider" scheme="https://blackie1019.github.io/tags/Rider/"/>
     
-      <category term="git" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/git/"/>
+      <category term="git" scheme="https://blackie1019.github.io/tags/git/"/>
     
-      <category term="git ignore" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/git-ignore/"/>
+      <category term="git ignore" scheme="https://blackie1019.github.io/tags/git-ignore/"/>
     
   </entry>
   
   <entry>
     <title>[Git] Switch from HEAD to master branch cause to disappear of part of the project</title>
-    <link href="https://blackie1019.github.io/new-blackie1019.github.io/2018/08/31/Git-Switch-from-Head-branch-to-Master-branch-cause-to-disappear-of-part-of-the-project/"/>
-    <id>https://blackie1019.github.io/new-blackie1019.github.io/2018/08/31/Git-Switch-from-Head-branch-to-Master-branch-cause-to-disappear-of-part-of-the-project/</id>
+    <link href="https://blackie1019.github.io/2018/08/31/Git-Switch-from-Head-branch-to-Master-branch-cause-to-disappear-of-part-of-the-project/"/>
+    <id>https://blackie1019.github.io/2018/08/31/Git-Switch-from-Head-branch-to-Master-branch-cause-to-disappear-of-part-of-the-project/</id>
     <published>2018-08-31T10:31:28.000Z</published>
-    <updated>2019-09-30T15:35:39.258Z</updated>
+    <updated>2019-09-30T16:13:22.221Z</updated>
     
     <summary type="html">
     
@@ -634,19 +634,19 @@
       
         
         
-          &lt;!-- build time:Mon Sep 30 2019 15:36:13 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;記錄如何解決 Git 從 HEAD 切換到 master
+          &lt;!-- build time:Mon Sep 30 2019 16:14:01 GMT+0000 (Coordinated Universal Time) --&gt;&lt;p&gt;記錄如何解決 Git 從 HEAD 切換到 master
         
       
     
     </summary>
     
     
-      <category term="CI&amp;CD" scheme="https://blackie1019.github.io/new-blackie1019.github.io/categories/CI-CD/"/>
+      <category term="CI&amp;CD" scheme="https://blackie1019.github.io/categories/CI-CD/"/>
     
     
-      <category term="Git" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Git/"/>
+      <category term="Git" scheme="https://blackie1019.github.io/tags/Git/"/>
     
-      <category term="Source Control" scheme="https://blackie1019.github.io/new-blackie1019.github.io/tags/Source-Control/"/>
+      <category term="Source Control" scheme="https://blackie1019.github.io/tags/Source-Control/"/>
     
   </entry>
   
