@@ -14,8 +14,8 @@ timezone: Asia/Taipei
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blackie1019.github.io
-root: /new-blackie1019.github.io/
+url: https://blackie1019.github.io/new-blackie1019.github.io/
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
