@@ -57,6 +57,7 @@
     }
 }
 
+
 /*Signature*/
 
 .mwt_border{
@@ -172,19 +173,4 @@
 	width: 60px;
 	height: 60px;
 	display: inline;
-}
-
-
-/*RWD span of logo */
-@media only screen and (max-width: 992px){
-    nav .brand-logo {
-        left: 60%;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-        width: 310px;
-    }
-
-    header .brand-logo .logo-span {
-        font-size: 1.6rem;
-    }
 }

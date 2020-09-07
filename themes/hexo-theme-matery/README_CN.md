@@ -2,7 +2,7 @@
 
 [![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![Gitter](https://img.shields.io/gitter/room/blinkfox/hexo-theme-matery.svg)](https://gitter.im/hexo-theme-matery/Lobby?utm_source=badge) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
 
-[English Document](README.md) | [演示示例](https://blinkfox.github.io/) | QQ 交流群: `926552981`
+[🇺🇸English Document](README.md) | [国内访问示例 (http://blinkfox.com)](http://blinkfox.com) | [Github 部署演示示例 (https://blinkfox.github.io)](https://blinkfox.github.io) | QQ 交流群1（已满）: [`926552981`](https://jq.qq.com/?_wv=1027&k=5zMDYHT) | QQ 交流群2（推荐）: [`971887688`](https://jq.qq.com/?_wv=1027&k=53q2Ayp)
 
 > 这是一个采用 `Material Design` 和响应式设计的 Hexo 博客主题。
 
@@ -26,7 +26,7 @@
 - 集成了[不蒜子统计](http://busuanzi.ibruce.info/)、谷歌分析（`Google Analytics`）和文章字数统计等功能
 - 支持在首页的音乐播放和视频播放功能
 - 支持`emoji`表情，用`markdown emoji`语法书写直接生成对应的能**跳跃**的表情。
-- 支持 [DaoVoice](http://www.daovoice.io/) 在线聊天功能。
+- 支持 [DaoVoice](http://www.daovoice.io/)、[Tidio](https://www.tidio.com/) 在线聊天功能。
 
 ## 贡献者
 
@@ -56,7 +56,7 @@ git clone https://github.com/blinkfox/hexo-theme-matery.git
 修改 Hexo 根目录下的 `_config.yml` 的  `theme` 的值：`theme: hexo-theme-matery`
 
 #### `_config.yml` 文件的其它修改建议:
- 
+
 - 请修改 `_config.yml` 的 `url` 的值为你的网站主 `URL`（如：`http://xxx.github.io`）。
 - 建议修改两个 `per_page` 的分页条数值为 `6` 的倍数，如：`12`、`18` 等，这样文章列表在各个屏幕下都能较好的显示。
 - 如果你是中文用户，则建议修改 `language` 的值为 `zh-CN`。
@@ -139,9 +139,9 @@ layout: "contact"
 
 > **注**：本留言板功能依赖于第三方评论系统，请**激活**你的评论系统才有效果。并且在主题的 `_config.yml` 文件中，第 `19` 至 `21` 行的“**菜单**”配置，取消关于留言板的注释即可。
 
-### 新建友情连接 friends 页（可选的）
+### 新建友情链接 friends 页（可选的）
 
-`friends` 页是用来展示**友情连接**信息的页面，如果在你的博客 `source` 目录下还没有 `friends/index.md` 文件，那么你就需要新建一个，命令如下：
+`friends` 页是用来展示**友情链接**信息的页面，如果在你的博客 `source` 目录下还没有 `friends/index.md` 文件，那么你就需要新建一个，命令如下：
 
 ```bash
 hexo new page "friends"
@@ -181,24 +181,93 @@ layout: "friends"
     "title": "前去学习"
 }]
 ```
+### 新建 404 页
 
-### 添加emoji表情支持（可选的）
+如果在你的博客 `source` 目录下还没有 `404.md` 文件，那么你就需要新建一个
 
-本主题新增了对`emoji`表情的支持，使用到了 [hexo-filter-github-emojis](https://npm.taobao.org/package/hexo-filter-github-emojis) 的 Hexo 插件来支持 `emoji`表情的生成，把对应的`markdown emoji`语法（`::`,例如：`:smile:`）转变成会跳跃的`emoji`表情，安装命令如下：
-
-```bash
-npm install hexo-filter-github-emojis --save
-```
-
-在 Hexo 根目录下的 `_config.yml` 文件中，新增以下的配置项：
+编辑你刚刚新建的页面文件 `/source/404.md`，至少需要以下内容：
 
 ```yaml
-githubEmojis:
-  enable: true
-  className: github-emoji
-  inject: true
-  styles:
-  customEmojis:
+---
+title: 404
+date: 2018-09-30 17:25:30
+type: "404"
+layout: "404"
+description: "Oops～，我崩溃了！找不到你想要的页面 :("
+---
+```
+
+### 菜单导航配置
+
+#### 配置基本菜单导航的名称、路径url和图标icon.
+
+1.菜单导航名称可以是中文也可以是英文(如：`Index`或`主页`) 
+2.图标icon 可以在[Font Awesome](https://fontawesome.com/icons) 中查找   
+
+```yaml
+menu:
+  Index:
+    url: /
+    icon: fas fa-home
+  Tags:
+    url: /tags
+    icon: fas fa-tags
+  Categories:
+    url: /categories
+    icon: fas fa-bookmark
+  Archives:
+    url: /archives
+    icon: fas fa-archive
+  About:
+    url: /about
+    icon: fas fa-user-circle
+  Friends:
+    url: /friends
+    icon: fas fa-address-book
+```
+
+#### 二级菜单配置方法
+如果你需要二级菜单则可以在原基本菜单导航的基础上如下操作     
+1.在需要添加二级菜单的一级菜单下添加`children`关键字(如:`About`菜单下添加`children`)     
+2.在`children`下创建二级菜单的 名称name,路径url和图标icon.      
+3.注意每个二级菜单模块前要加 `-`.     
+4.注意缩进格式  
+
+```yaml
+menu:
+  Index:
+    url: /
+    icon: fas fa-home
+  Tags:
+    url: /tags
+    icon: fas fa-tags
+  Categories:
+    url: /categories
+    icon: fas fa-bookmark
+  Archives:
+    url: /archives
+    icon: fas fa-archive
+  About:
+    url: /about
+    icon: fas fa-user-circle-o
+  Friends:
+    url: /friends
+    icon: fas fa-address-book
+  Medias:
+    icon: fas fa-list
+    children:
+      - name: Musics
+        url: /musics
+        icon: fas fa-music
+      - name: Movies
+        url: /movies
+        icon: fas fa-film
+      - name: Books
+        url: /books
+        icon: fas fa-book
+      - name: Galleries
+        url: /galleries
+        icon: fas fa-image
 ```
 
 执行 `hexo clean && hexo g` 重新生成博客文件，然后就可以在文章中对应位置看到你用`emoji`语法写的表情了。
@@ -240,7 +309,7 @@ search:
   field: post
 ```
 
-### 中文链接转拼音（可选的）
+### 中文链接转拼音（建议安装）
 
 如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 `SEO`，且 `gitment` 评论对中文链接也不支持。我们可以用 [hexo-permalink-pinyin](https://github.com/viko16/hexo-permalink-pinyin) Hexo 插件使在生成文章时生成中文拼音的永久链接。
 
@@ -260,7 +329,7 @@ permalink_pinyin:
 
 > **注**：除了此插件外，[hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink) 插件也可以生成非中文的链接。
 
-### 文章字数统计插件（可选的）
+### 文章字数统计插件（建议安装）
 
 如果你想要在文章中显示文章字数、阅读时长信息，可以安装 [hexo-wordcount](https://github.com/willin/hexo-wordcount)插件。
 
@@ -270,14 +339,35 @@ permalink_pinyin:
 npm i --save hexo-wordcount
 ```
 
-然后只需在本主题下的 `_config.yml` 文件中，激活以下配置项即可：
+然后只需在本主题下的 `_config.yml` 文件中，将各个文章字数相关的配置激活即可：
 
 ```yaml
-wordCount:
-  enable: false # 将这个值设置为 true 即可.
-  postWordCount: true
-  min2read: true
-  totalCount: true
+postInfo:
+  date: true
+  update: false
+  wordCount: false # 设置文章字数统计为 true.
+  totalCount: false # 设置站点文章总字数统计为 true.
+  min2read: false # 阅读时长.
+  readCount: false # 阅读次数.
+```
+
+### 添加emoji表情支持（可选的）
+
+本主题新增了对`emoji`表情的支持，使用到了 [hexo-filter-github-emojis](https://npm.taobao.org/package/hexo-filter-github-emojis) 的 Hexo 插件来支持 `emoji`表情的生成，把对应的`markdown emoji`语法（`::`,例如：`:smile:`）转变成会跳跃的`emoji`表情，安装命令如下：
+
+```bash
+npm install hexo-filter-github-emojis --save
+```
+
+在 Hexo 根目录下的 `_config.yml` 文件中，新增以下的配置项：
+
+```yaml
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
 ```
 
 ### 添加 RSS 订阅支持（可选的）
@@ -318,28 +408,31 @@ feed:
 
 ### 修改社交链接
 
-在主题的 `_config.yml` 文件中，默认支持 `QQ`、`GitHub` 和邮箱的配置，你可以在主题文件的 `/layout/_partial/social-link.ejs` 文件中，新增、修改你需要的社交链接地址，增加链接可参考如下代码：
+在主题的 `_config.yml` 文件中，默认支持 `QQ`、`GitHub` 和邮箱等的配置，你可以在主题文件的 `/layout/_partial/social-link.ejs` 文件中，新增、修改你需要的社交链接地址，增加链接可参考如下代码：
 
 ```html
-<a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-    <i class="fa fa-github"></i>
-</a>
+<% if (theme.socialLink.github) { %>
+    <a href="<%= theme.socialLink.github %>" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+<% } %>
 ```
 
 其中，社交图标（如：`fa-github`）你可以在 [Font Awesome](https://fontawesome.com/icons) 中搜索找到。以下是常用社交图标的标识，供你参考：
 
-- Facebook: `fa-facebook`
-- Twitter: `fa-twitter`
-- Google-plus: `fa-google-plus`
-- Linkedin: `fa-linkedin`
-- Tumblr: `fa-tumblr`
-- Medium: `fa-medium`
-- Slack: `fa-slack`
-- 新浪微博: `fa-weibo`
-- 微信: `fa-wechat`
-- QQ: `fa-qq`
+- Facebook: `fab fa-facebook`
+- Twitter: `fab fa-twitter`
+- Google-plus: `fab fa-google-plus`
+- Linkedin: `fab fa-linkedin`
+- Tumblr: `fab fa-tumblr`
+- Medium: `fab fa-medium`
+- Slack: `fab fa-slack`
+- Sina Weibo: `fab fa-weibo`
+- Wechat: `fab fa-weixin`
+- QQ: `fab fa-qq`
+- Zhihu: `fab fa-zhihu`
 
-> **注意**: 本主题中使用的 `Font Awesome` 版本为 `4.7.0`。
+> **注意**: 本主题中使用的 `Font Awesome` 版本为 `5.11.0`。
 
 ### 修改打赏的二维码图片
 
@@ -347,49 +440,39 @@ feed:
 
 ### 配置音乐播放器（可选的）
 
-要支持音乐播放，就必须开启音乐的播放配置和音乐数据的文件。
-
-首先，在你的博客 `source` 目录下的 `_data` 目录（没有的话就新建一个）中新建 `musics.json` 文件，文件内容如下所示：
-
-```json
-[{
-	"name": "五月雨变奏电音",
-	"artist": "AnimeVibe",
-	"url": "http://xxx.com/music1.mp3",
-	"cover": "http://xxx.com/music-cover1.png"
-}, {
-	"name": "Take me hand",
-	"artist": "DAISHI DANCE,Cecile Corbel",
-	"url": "/medias/music/music2.mp3",
-	"cover": "/medias/music/cover2.png"
-}, {
-	"name": "Shape of You",
-	"artist": "J.Fla",
-	"url": "http://xxx.com/music3.mp3",
-	"cover": "http://xxx.com/music-cover3.png"
-}]
-```
-
-> **注**：以上 JSON 中的属性：`name`、`artist`、`url`、`cover` 分别表示音乐的名称、作者、音乐文件地址、音乐封面。
-
-然后，在主题的 `_config.yml` 配置文件中激活配置即可：
+要支持音乐播放，在主题的 `_config.yml` 配置文件中激活music配置即可：
 
 ```yaml
-# 是否在首页显示音乐.
+# 是否在首页显示音乐
 music:
   enable: true
-  showTitle: false
-  title: 听听音乐
-  fixed: false # 是否开启吸底模式
-  autoplay: false # 是否自动播放
+  title:     	    # 非吸底模式有效
+    enable: true
+    show: 听听音乐
+  server: netease   # require music platform: netease, tencent, kugou, xiami, baidu
+  type: playlist    # require song, playlist, album, search, artist
+  id: 503838841     # require song id / playlist id / album id / search keyword
+  fixed: false      # 开启吸底模式
+  autoplay: false   # 是否自动播放
   theme: '#42b983'
-  loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
-  order: 'list' # 音频循环顺序, 可选值: 'list', 'random'
-  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
-  volume: 0.7 # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
-  listFolded: false # 列表默认折叠
-  listMaxHeight: # 列表最大高度
+  loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
+  order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
+  preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  listFolded: true  # 列表默认折叠
 ```
+
+> `server`可选`netease`（网易云音乐），`tencent`（QQ音乐），`kugou`（酷狗音乐），`xiami`（虾米音乐），
+>
+> `baidu`（百度音乐）。
+>
+> `type`可选`song`（歌曲），`playlist`（歌单），`album`（专辑），`search`（搜索关键字），`artist`（歌手）
+>
+> `id`获取方法示例: 浏览器打开网易云音乐，点击我喜欢的音乐歌单，浏览器地址栏后面会有一串数字，`playlist`的`id`
+>
+> 即为这串数字。
+
+
 
 ## 文章 Front-matter 介绍
 
@@ -412,7 +495,8 @@ music:
 | summary    | 无                          | 文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要 |
 | categories | 无                          | 文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类 |
 | tags       | 无                          | 文章标签，一篇文章可以多个标签                              |
-| reprintPolicy       | cc_by                          | 文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个 |
+| keywords   | 文章标题                     | 文章关键字，SEO 时需要                              |
+| reprintPolicy | cc_by                    | 文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个 |
 
 > **注意**:
 > 1. 如果 `img` 属性不填写的话，文章特色图会根据文章标题的 `hashcode` 的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图**各有特色**。
@@ -521,6 +605,53 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ## 版本记录
 
+- v1.3.2
+  - 新增了繁体字的支持；
+  - 新增了 404 页面；
+  - 其他小问题修改；
+- v1.3.1
+  - 新增了 `kbd` 样式；
+  - 修复了子目录部署时词云中链接有误的问题；
+  - 移除了 TOC 中的竖线；
+  - 修复了首页 icon 图标中的 tooltip 不显示的问题；
+  - 修复生成静态文件时，每天切换 banner 不生效的问题；
+  - 更新了 `miniValine` 中的一些配置；
+- v1.3.0
+  - 新增了支持子目录部署的功能（如：`Gitee`）；
+  - 新增了 `MiniValine` 评论系统；
+  - 新增了 `jsdelivr` 的支持；
+  - 修复了诸多发现的 bug；
+- v1.2.2
+  - 新增了自定义文章 `keywords` 的功能；
+  - 新增静态彩带点击切换的功能和配置；
+  - 将文章字数统计、彩带和站点运行时间等功能默认设置为 `false`；
+  - 修改了文章的 `description` 的 meta 属性优先读取文章的 `summary` 属性；
+  - 修改了文章标题的 HTML 标签，从 `div` 改成了 `h1` 标题；
+  - 修改了页脚年份显示不正确的问题；
+  - 去掉了站点运行时间中多余的 `setTimeout` 代码；
+- v1.2.1
+  - 新增了 TOC 的展开目录层级设置和滚动条功能，防止目录较多的时候目录溢出；
+  - 修改了首页的展示方式为以前的模式；
+  - 修复首页按钮没有边框的问题；
+  - 修复了音乐及吸底模式、视频、推荐文章等不激活时仍然生成首页卡片的问题；
+  - 修复 wordCount 插件未安装的问题，修改了部分配置；
+  - 修复音乐的 JSON 配置中有单引号的情况页面不显示的音乐的问题
+  - 修复标签云在Hexo4.0下链接失效的问题；
+- v1.2.0
+  - 新增了 [DaoVoice](http://www.daovoice.io/)、[Tidio](https://www.tidio.com/) 的在线聊天功能；
+  - 新增了两级菜单的功能；
+  - 新增了打字效果的副标题；
+  - 新增了网页内容预加载的功能；
+  - 新增了首页 banner 是否每日切换的配置功能；
+  - 新增了显示 ICP 备案信息的功能，默认未开启；
+  - 新增了百度分析的配置；
+  - 新增了代码块的语言显示、一键复制、显示行号等功能；
+  - 新增了首页轮播图和推荐文章可自定义配置的功能；
+  - 新增了文章页面显示更新日期；
+  - 新增了转载规则的图标；
+  - 修改了分享的布局和显示方式；
+  - 升级更新了部分依赖库的版本；
+  - 其他细节修改和优化；
 - v1.1.0
   - 新增了 `emoji` 的支持；
   - 新增了站点运行时间统计及配置；

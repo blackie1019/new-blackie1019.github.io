@@ -26,16 +26,16 @@ var featureImages = theme.featureImages;
                 <a href="<%- url_for(page.prev.path) %>">
                     <div class="card-image">
                         <% if (page.prev.img) { %>
-                        <img src="<%= page.prev.img %>" class="responsive-img" alt="<%- page.prev.title %>">
+                        <img src="<%- url_for(page.prev.img) %>" class="responsive-img" alt="<%= page.prev.title %>">
                         <% } else { %>
                         <%
                             var len = featureImages.length;
                             var num = Math.abs(hashCode(page.prev.title) % len);
                             featureimg = featureImages[num];
                         %>
-                        <img src="<%= featureimg %>" class="responsive-img" alt="<%- page.prev.title %>">
+                        <img src="<%- theme.jsDelivr.url %><%- url_for(featureimg) %>" class="responsive-img" alt="<%= page.prev.title %>">
                         <% } %>
-                        <span class="card-title"><%- page.prev.title %></span>
+                        <span class="card-title"><%= page.prev.title %></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -82,22 +82,20 @@ var featureImages = theme.featureImages;
         <% } else { %>
         <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;<%= __('curr') %>
+                <i class="far fa-dot-circle"></i>&nbsp;<%= __('curr') %>
             </div>
             <div class="card">
                 <a href="<%- url_for(page.path) %>">
                     <div class="card-image">
                         <% if (page.img) { %>
-                        <img src="<%= page.img %>" class="responsive-img" alt="<%- page.title %>">
+                        <img src="<%- url_for(page.img) %>" class="responsive-img" alt="<%= page.title %>">
                         <% } else { %>
                         <%
-                            var len = featureImages.length;
-                            var num = Math.abs(hashCode(page.title) % len);
-                            featureimg = featureImages[num];
+                            featureimg = featureImages[Math.abs(hashCode(page.title) % featureImages.length)];
                         %>
-                        <img src="<%= featureimg %>" class="responsive-img" alt="<%- page.title %>">
+                        <img src="<%- theme.jsDelivr.url %><%- url_for(featureimg) %>" class="responsive-img" alt="<%= page.title %>">
                         <% } %>
-                        <span class="card-title"><%- page.title %></span>
+                        <span class="card-title"><%= page.title %></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -152,16 +150,14 @@ var featureImages = theme.featureImages;
                 <a href="<%- url_for(page.next.path) %>">
                     <div class="card-image">
                         <% if (page.next.img) { %>
-                        <img src="<%= page.next.img %>" class="responsive-img" alt="<%- page.next.title %>">
+                        <img src="<%- url_for(page.next.img) %>" class="responsive-img" alt="<%= page.next.title %>">
                         <% } else { %>
                         <%
-                            var len = featureImages.length;
-                            var num = Math.abs(hashCode(page.next.title) % len);
-                            featureimg = featureImages[num];
+                            featureimg = featureImages[Math.abs(hashCode(page.next.title) % featureImages.length)];
                         %>
-                        <img src="<%= featureimg %>" class="responsive-img" alt="<%- page.next.title %>">
+                        <img src="<%- theme.jsDelivr.url %><%- url_for(featureimg) %>" class="responsive-img" alt="<%= page.next.title %>">
                         <% } %>
-                        <span class="card-title"><%- page.next.title %></span>
+                        <span class="card-title"><%= page.next.title %></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -208,22 +204,20 @@ var featureImages = theme.featureImages;
         <% } else { %>
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                <%= __('curr') %>&nbsp;<i class="fas fa-chevron-right"></i>
+                <%= __('curr') %>&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
                 <a href="<%- url_for(page.path) %>">
                     <div class="card-image">
                         <% if (page.img) { %>
-                        <img src="<%= page.img %>" class="responsive-img" alt="<%- page.title %>">
+                        <img src="<%- url_for(page.img) %>" class="responsive-img" alt="<%= page.title %>">
                         <% } else { %>
                         <%
-                            var len = featureImages.length;
-                            var num = Math.abs(hashCode(page.title) % len);
-                            featureimg = featureImages[num];
+                            featureimg = featureImages[Math.abs(hashCode(page.title) % featureImages.length)];
                         %>
-                        <img src="<%= featureimg %>" class="responsive-img" alt="<%- page.title %>">
+                        <img src="<%- theme.jsDelivr.url %><%- url_for(featureimg) %>" class="responsive-img" alt="<%= page.title %>">
                         <% } %>
-                        <span class="card-title"><%- page.title %></span>
+                        <span class="card-title"><%= page.title %></span>
                     </div>
                 </a>
                 <div class="card-content article-content">

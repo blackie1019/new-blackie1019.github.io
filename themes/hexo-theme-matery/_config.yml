@@ -1,6 +1,9 @@
 # main menu navigation url and icon
 # 配置菜单导航的名称、路径和图标icon.
 menu:
+  Index:
+    url: /
+    icon: fas fa-home
   Tags:
     url: /tags
     icon: fas fa-tags
@@ -13,18 +16,36 @@ menu:
   About:
     url: /about
     icon: fas fa-user-circle
-  Recommend:
+  # Contact:
+  #   url: /contact
+  #   icon: fas fa-comments
+  Friends:
     url: /friends
     icon: fas fa-address-book
-  RSS:
-    url: /atom.xml
-    icon: fas fa-rss
+  # 二级菜单写法如下
+  #Medias:
+  #  icon: fas fa-list
+  #  children:
+  #    - name: Musics
+  #      url: /musics
+  #      icon: fas fa-music
+  #    - name: Movies
+  #      url: /movies
+  #      icon: fas fa-film
+  #    - name: Books
+  #      url: /books
+  #      icon: fas fa-book
+  #    - name: Galleries
+  #      url: /galleries
+  #      icon: fas fa-image
+
 # Website start time.
 # 站点运行开始时间.
 time:
+  enable: false
   year: 2013 # 年份
-  month: 01 # 月份
-  date: 01 # 日期
+  month: 07 # 月份
+  date: 17 # 日期
   hour: 00 # 小时
   minute: 00 # 分钟
   second: 00 # 秒
@@ -37,6 +58,8 @@ cover:
   autoLoop: true # 是否自动轮播. Whether it is automatically rotated.
   duration: 120 # 切换延迟时间. Switching delay time.
   intervalTime: 5000 # 自动切换下一张的间隔时间. Automatically switch the interval of the next one.
+  useConfig: false # 是否使用配置文件, 在 _data/covers.json 下配置推荐文章, false则使用主题在文章中的配置 cover coverImg
+  # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/covers.json 移动到 my-blog/source/_data/下修改配置即可
 
 # index page dream text,
 # 配置首页显示"梦想"的语句.
@@ -50,17 +73,22 @@ dream:
 # 是否在首页显示音乐.
 music:
   enable: false
-  showTitle: true
-  title: 听听音乐
-  fixed: false # 开启吸底模式
-  autoplay: false # 是否自动播放
+  title: #非吸底模式有效
+    enable: true
+    show: 听听音乐
+  autoHide: true    # hide automaticaly
+  server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
+  type: playlist    #require song, playlist, album, search, artist
+  id: 503838841     #require	song id / playlist id / album id / search keyword
+  fixed: true       # 开启吸底模式
+  autoplay: false   # 是否自动播放
   theme: '#42b983'
-  loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
-  order: 'list' # 音频循环顺序, 可选值: 'list', 'random'
-  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
-  volume: 0.7 # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
-  listFolded: false # 列表默认折叠
-  listMaxHeight: #列表最大高度
+  loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
+  order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
+  preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  listFolded: true  # 列表默认折叠
+  hideLrc: true     # 隐藏歌词
 
 # Whether to display the videos.
 # 是否在首页显示视频.
@@ -81,11 +109,14 @@ video:
 # Whether to display the title of the recommended posts
 # 是否显示推荐文章的标题
 recommend:
+  enable: true
   showTitle: true
+  useConfig: false # 是否使用配置文件, 在 _data/recommends.json 下配置推荐文章, false则会走主题配置的 top 属性
+  # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/recommends.json 移动到 my-blog/source/_data/下修改配置即可
 
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
-favicon: /favicon.png
+favicon: /favicon.ico
 logo: /medias/logo.png
 
 # The configuration of the second button in the home banner,
@@ -95,22 +126,16 @@ indexbtn:
   enable: true
   name: Github
   icon: fab fa-github-alt
-  url: https://github.com/blinkfox/hexo-theme-matery
+  url: https://github.com/blackie1019/blackie1019.github.io
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github:  # https://github.com/blackie1019
-  email: # blackie1019@gmail.com
-  facebook: # https://www.facebook.com/chentien.tsai
-  twitter: # https://twitter.com/xxx
-  linkedin: # https://tw.linkedin.com/in/blackie1019
-  slideshare: # https://www.slideshare.net/chentientsai
-  # qq: # 123456789
-  # weibo: # https://weibo.com/xxx
-  # zhihu: # https://www.zhihu.com/xxx
-  rss: false # true、false
+  github: https://github.com/blackie1019/blackie1019
+  email: blackie1019@gmail.com
+  facebook: https://www.facebook.com/chentien.tsai
+  rss: true # true、false
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # You can add `toc: false` to the Front-matter of a post to turn off the TOC.
@@ -119,17 +144,20 @@ socialLink:
 toc:
   enable: true
   heading: h2, h3, h4
+  collapseDepth: 1 # 目录默认展开层级
   showToggleBtn: true # 是否显示切换TOC目录展开收缩的按钮
 
-# Whether the code is broken.
-# 代码是否折行
+# 代码块相关
 code:
-  break: true
+  lang: true # 代码块是否显示名称
+  copy: true # 代码块是否可复制
+  shrink: true # 代码块是否可以收缩
+  break: true # 代码是否折行
 
 # 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
 reward:
   enable: true
-  title: 你的賞識是我前進的動力
+  title: 感謝請我喝咖啡！
   wechat: /medias/reward/wechat.png
   alipay: /medias/reward/alipay.jpg
 
@@ -153,13 +181,15 @@ mathjax:
 # Post word count, reading duration, site total word count.
 # Before you activate, please confirm that you have installed the hexo-wordcount plugin,
 # install the plugin command: `npm i --save hexo-wordcount`.
-# 文章字数统计、阅读时长、总字数统计
-# 激活前请确认你已经安装了 hexo-wordcount 插件，安装命令: `npm i --save hexo-wordcount`
-wordCount:
-  enable: true
-  postWordCount: true
-  min2read: true
-  totalCount: true
+# 文章字数统计、阅读时长、总字数统计等
+# 文章信息--若要开启文章字数统计，需要安装 hexo-wordcount 插件，安装命令: `npm i --save hexo-wordcount`
+postInfo:
+  date: true # 发布日期
+  update: true # 更新日期
+  wordCount: false # 文章字数统计
+  totalCount: false # 站点总文章字数
+  min2read: true # 文章阅读时长
+  readCount: true # 文章阅读次数
 
 # Whether to activate the 'love' effect of clicking on the page.
 # 是否激活点击页面的'爱心'效果，默认激活.
@@ -170,9 +200,12 @@ clicklove:
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
   avatar: /medias/avatar.jpg
-  career: Technical Architect
-  introduction: Hi 我是Blackie，正在練習引導與溝通的軟體架構師，目前專注於 .NET 與 JavaScript 應用開發，醉心於敏捷並高效的系統架構設計，對於各種解決方案與大型應用程式架構特感興趣。
+  career: Technical Architect & Director of Product Development
+  introduction: Hi 我是 Blackie，正在練習引導與溝通的軟體架構師，目前專注於 .NET 與 JavaScript 應用開發，醉心於敏捷並高效的系統架構設計，對於各種解決方案與大型應用程式架構特感興趣。
 
+# config my projects informations in about page.
+# If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myCerts:
   data:
     - /medias/myprofile/certs/cert_mvp.jpg
@@ -180,9 +213,6 @@ myCerts:
     - /medias/myprofile/certs/cert_scrumalliance.png
     - /medias/myprofile/certs/cert_ithelp.png
 
-# config my projects informations in about page.
-# If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
-# 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myProjects:
   enable: true
   data:
@@ -191,11 +221,11 @@ myProjects:
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
       url: http://github.com/blinkfox/hexo-theme-matery
       desc: This is a Hexo blog theme with 'Material Design' and responsive design.
-    zealt:
+    Fenix:
         icon: fas fa-database
         iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/blinkfox/zealot
-        desc: 一个轻量级的SQL和参数动态生成工具库
+        url: https://github.com/blinkfox/fenix
+        desc: 这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。
     typora-vue-theme:
         icon: fas fa-file-alt
         iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
@@ -301,10 +331,54 @@ valine:
   placeholder: 'just go go' # Comment Box placeholder
   background: /medias/comment_bg.png
 
+# The configuration of the MiniValine comment module is not activated by default.
+# To use it, activate the configuration item and set appId and appKey.
+# MiniValine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
+# See: https://github.com/MiniValine/MiniValine
+minivaline:
+  enable: false
+  appId: zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz # Your leancloud application appid
+  appKey: itmzT1JbXfAjVwMqDhGPzU45 # Your leancloud application appkey
+  mode: DesertsP # DesertsP or xCss
+  placeholder: Write a Comment # Comment box placeholder
+  math: true # Support MathJax.
+  md: true # Support Markdown.
+  enableQQ: false # Enable QQ avatar API.
+  NoRecordIP: false # Do not record commenter IP.
+  visitor: true # Article reading statistics.
+  maxNest: 6 # Sub-comment maximum nesting depth.
+  pageSize: 6 # Pagination size.
+  adminEmailMd5: de8a7aa53d07e6b6bceb45c64027763d # The MD5 of Admin Email to show Admin Flag.[Just Only DesertsP Style mode]
+  tagMeta: # The String Array of Words to show Flag.[Just Only xCss Style mode]
+    - 管理员
+    - 小伙伴
+    - 访客
+  master: # The MD5 String Array of master Email to show master Flag.[Just Only xCss Style mode]
+    - de8a7aa53d07e6b6bceb45c64027763d
+  friends: # The MD5 String Array of friends Email to show friends Flag.[Just Only xCss Style mode]
+    - b5bd5d836c7a0091aa8473e79ed4c25e
+    - adb7d1cd192658a55c0ad22a3309cecf
+    - 3ce1e6c77b4910f1871106cb30dc62b0
+    - cfce8dc43725cc14ffcd9fb4892d5bfc
+  # MiniValine's display language depends on user's browser or system environment
+  # If you want everyone visiting your site to see a uniform language, you can set a force language value
+  # Available values: en  | zh-CN | (and many more)
+  # More i18n info: https://github.com/MiniValine/minivaline-i18n
+  lang:
+  # Expression Url.
+  # https://github.com/MiniValine/MiniValine/blob/master/.github/FAQ.md#how-to-customize-emoticons
+  emoticonUrl:
+    - https://cdn.jsdelivr.net/npm/alus@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/qq@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest
+
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
-  enable: false
+  enable: true
   url: https://github.com/blinkfox/hexo-theme-matery
   title: Fork Me
 
@@ -336,51 +410,53 @@ googleAnalytics:
 # 添加 baidu Analytics 配置
 baiduAnalytics:
   enable: false
-  id: 
-  
+  id:
+
 # 百度搜索资源平台提交链接
-baiduPush: true
+baiduPush: false
 
 # The used front-end library can be replaced with the corresponding CDN address as needed,
 # If the specific version is not specified below, you can use the latest version.
 # 使用到的前端库，可按需替换成对应的CDN地址，如果下面未指定具体的版本号，使用最新的版本即可.
 libs:
   css:
-    fontAwesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css # V5.11.1
-    materialize: https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css # 1.0.0
-    aos: https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css
-    animate: https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css # V3.5.1
-    lightgallery: https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.min.css # V1.6.11
-    aplayer: https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css
-    dplayer: https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.css
-    gitalk: https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.5.0/gitalk.min.css
-    jqcloud: https://cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud.css
-    tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.8.0/tocbot.css
+    fontAwesome: /libs/awesome/css/all.css # V5.11.1
+    materialize: /libs/materialize/materialize.min.css # 1.0.0
+    aos: /libs/aos/aos.css
+    animate: /libs/animate/animate.min.css # V3.5.1
+    lightgallery: /libs/lightGallery/css/lightgallery.min.css # V1.6.11
+    aplayer: /libs/aplayer/APlayer.min.css
+    dplayer: /libs/dplayer/DPlayer.min.css
+    gitalk: /libs/gitalk/gitalk.css
+    jqcloud: /libs/jqcloud/jqcloud.css
+    tocbot: /libs/tocbot/tocbot.css
   js:
-    jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js
-    materialize: https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js # 1.0.0
-    masonry: https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js # v4.0.0
-    aos: https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js
-    scrollProgress: https://cdnjs.cloudflare.com/ajax/libs/scrollprogress/3.0.2/scrollProgress.min.js
-    lightgallery: https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/js/lightgallery-all.min.js # V1.6.11
+    jquery: /libs/jquery/jquery.min.js
+    materialize: /libs/materialize/materialize.min.js # 1.0.0
+    masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
+    aos: /libs/aos/aos.js
+    scrollProgress: /libs/scrollprogress/scrollProgress.min.js
+    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.6.11
     clicklove: /libs/others/clicklove.js
     busuanzi: /libs/others/busuanzi.pure.mini.js
-    aplayer: https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js
-    dplayer: https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.js
-    crypto: https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js
-    echarts: https://cdnjs.cloudflare.com/ajax/libs/echarts/4.3.0/echarts.min.js
-    gitalk: https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.5.0/gitalk.min.js
-    valine: https://unpkg.com/valine@1.3.10/dist/Valine.min.js # 1.3.10  若想保持最新版，请替换为 https://unpkg.com/valine@1.3.10/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
-    jqcloud: https://cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud-1.0.4.min.js
-    tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.8.0/tocbot.min.js
-    canvas_nest: https://cdn.bootcss.com/canvas-nest.js/2.0.4/canvas-nest.js
+    aplayer: /libs/aplayer/APlayer.min.js
+    dplayer: /libs/dplayer/DPlayer.min.js
+    crypto: /libs/cryptojs/crypto-js.min.js
+    echarts: /libs/echarts/echarts.min.js
+    gitalk: /libs/gitalk/gitalk.min.js
+    valine: /libs/valine/Valine.min.js # 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
+    minivaline: https://cdn.jsdelivr.net/npm/minivaline/dist/MiniValine.min.js
+    jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
+    tocbot: /libs/tocbot/tocbot.min.js
+    canvas_nest: /libs/background/canvas-nest.js
     ribbon: /libs/background/ribbon.min.js
+    ribbonRefresh: /libs/background/ribbon-refresh.min.js
     ribbon_dynamic: /libs/background/ribbon-dynamic.js
-    instantpage: https://cdnjs.cloudflare.com/ajax/libs/instant.page/2.0.0/instantpage.min.js
+    instantpage: /libs/instantpage/instantpage.js
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
-featureImages: 
+featureImages:
 - /medias/featureimages/0.jpg
 - /medias/featureimages/1.jpg
 - /medias/featureimages/2.jpg
@@ -428,17 +504,17 @@ featureImages:
 reprint:
   enable: true # whether enable reprint section 是否启用“转载规则限定模块”
   default: cc_by
-  
-# DaoVoice online contact 
-daovoice: 
-  enable: true
+
+# DaoVoice online contact
+daovoice:
+  enable: false
   app_id:
-  
-# Tidio online contact 
+
+# Tidio online contact
 tidio:
   enable: false
-  public_key: 
- 
+  public_key:
+
 #背景canvas-nest
 canvas_nest:
   enable: false
@@ -454,11 +530,11 @@ ribbon:
   size: 150 # 彩带大小, 默认: 90.
   alpha: 0.6 # 彩带透明度 (0 ~ 1), 默认: 0.6.
   zIndex: -1 # 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1.
-  click_to_change: false  # 设置是否每次点击都更换彩带.
+  clickChange: false  # 设置是否每次点击都更换彩带.
 
 # 背景动态彩带.
 ribbon_dynamic:
-  enable: true
+  enable: false
 
 # sharejs文章分享模块.
 # 支持顺序，可选项目为twitter, facebook, google, qq, qzone, wechat, weibo, douban, linkedin.
@@ -469,12 +545,12 @@ sharejs:
 # addthis文章分享模块.
 addthis:
   enable: false
-  pubid:  #前往https://www.addthis.com/获取
-  
+  pubid:  # 前往https://www.addthis.com/获取
+
 # 打字效果副标题.
 # 如果有符号 ‘ ，请在 ’ 前面加上 \
-subtitle: 
-  enable: true
+subtitle:
+  enable: false 
   loop: true # 是否循环
   showCursor: true # 是否显示光标
   startDelay: 300 # 开始延迟
@@ -489,17 +565,30 @@ navMenu:
   bgColor: " " # 二级侧栏子菜单背景颜色,留空即为全局背景色
 
 # 网页预加载.
-instantpage: true
+instantpage:
+  enable: true
 
 # banner 是否每日切换.
 # 若为 false, 则 banner 默认为 /medias/banner/0.jpg
-banner: false
+banner:
+  enable: true
 
 #ICP备案信息尾部显示
 icp:
   enable: false
   url: # 备案链接
   text: # 备案信息
+
+# CDN访问加速 
+# 第一次使用本功能，一定要先配置url，再`hexo cl && hexo g && hexo d`部署到GitHub的仓库，注意！必须是GitHub的仓库！
+# 如果必须要使用国内的coding或者gitee，可以采用双部署，同时将网站部署到两个仓库（其中一个必须是GitHub的仓库）
+# URL配置规则（例子如下）： https://cdn.jsdelivr.net/gh/你的GitHub用户名/你的仓库名
+# 如果想关闭此功能，将 url地址 注释或删除即可！
+#
+# 注：配置了此项，就代表着本地调试的时候，网站依然会去GitHub请求资源（原来的资源），本地调试的时候记得将 此项配置 注释或者删除掉
+# 更多关于访问速度优化，请查看：https://blog.sky03.cn/posts/42790.html
+jsDelivr:
+  url: # https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io
 
 # Signature
 signature:
